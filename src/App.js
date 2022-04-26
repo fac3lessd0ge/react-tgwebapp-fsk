@@ -11,12 +11,16 @@ const App = () => {
 
 	const buttonClickHandler = (e) => {
 		console.log(webApp);
+		webApp.sendData(message);
+
 		setMessage(webApp.isExpanded.toString())
+
 	}
 
 	return ( 
 		<main className='App'>
-			<div className='content'>
+			<div className='content' value={message} onChange={(e) => {setMessage(e.target.value)} }>
+				<input placeholder='Введите имя' />
 				<Button innerText={'Press me!'} clickHandler={buttonClickHandler}/>
 				{message}
 			</div>
