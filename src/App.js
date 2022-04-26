@@ -12,9 +12,6 @@ const App = () => {
 	const buttonClickHandler = (e) => {
 		console.log(webApp);
 		webApp.sendData(message);
-
-		setMessage(webApp.isExpanded.toString())
-
 	}
 
 	return ( 
