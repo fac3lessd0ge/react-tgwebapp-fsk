@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useTelegramWebApp } from 'react-telegram-webapp';
 import './App.css';
 import Button from './components/Button';
+import { TelegramWebApp } from 'react-telegram-webapp';
 
 const App = () => {
 	const [message, setMessage] = React.useState('')
@@ -10,7 +11,7 @@ const App = () => {
 
 	const buttonClickHandler = (e) => {
 		console.log(webApp);
-		setMessage("Pressed!")
+		setMessage(webApp.isExpanded.toString())
 	}
 
 	return ( 
