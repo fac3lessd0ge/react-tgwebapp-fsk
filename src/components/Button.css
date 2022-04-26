@@ -1,0 +1,16 @@
+button {
+    outline: none;
+    border-radius: 10px;
+    height: 5.5vh;
+    min-height: 30px;
+    width: 10vw;
+    min-width: 100px;
+    border: none;
+    background-color: #31b545;
+    color: #fff;
+    transition: background-color 0.07s;
+  }
+  
+  button:active {
+    background-color: #31a442;
+  }
