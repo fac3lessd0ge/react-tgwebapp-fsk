@@ -1,19 +1,28 @@
 main {
   width: 100%;
   min-height: 100%;
-  display: grid;
-  place-items: center;
+  display: flex;
   background-color:#141414;
   overflow: hidden;
+  color: #fff;
 }
 
 .content {
   display: flex;
+  padding-top: 30%;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 15px;
   min-height: 100%;
   width: 100%;
   position: relative;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 2.5rem;
+  margin-top: 62px;
+  margin-bottom: 83px;
 }
