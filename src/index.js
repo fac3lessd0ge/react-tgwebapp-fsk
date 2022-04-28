@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { TelegramWebApp } from 'react-telegram-webapp';
+import './fonts/FuturaFuturis/style.css';
 
 async function validateHash(hash) {
   const response = {
