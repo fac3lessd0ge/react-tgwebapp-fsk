@@ -1,0 +1,8 @@
+.gradient-ellipse {
+    height: 10rem;
+    width: 100%;
+    background: radial-gradient(circle at bottom, #FF4D00, #141414);
+    filter: blur(50px); 
+    position: absolute;
+    bottom: -20%;
+}

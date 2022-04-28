@@ -3,6 +3,8 @@ main {
   min-height: 100%;
   display: grid;
   place-items: center;
+  background-color:#141414;
+  overflow: hidden;
 }
 
 .content {
@@ -11,4 +13,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 15px;
+  min-height: 100%;
+  width: 100%;
+  position: relative;
 }
