@@ -1,0 +1,17 @@
+.round-button {
+    display: grid;
+    place-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: #3F3F40;
+    border-radius: 50%;
+    font-size: 2.1rem;
+}
+
+.round-button:hover {
+    cursor: pointer;
+}
+
+.active {
+    background-color: #E84E0E;
+}
