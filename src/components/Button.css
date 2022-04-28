@@ -1,16 +1,11 @@
 button {
     outline: none;
-    border-radius: 10px;
-    height: 5.5vh;
-    min-height: 30px;
-    width: 10vw;
+    border-radius: 3rem;
+    height: 3rem;
     min-width: 100px;
+    width: 242px;
     border: none;
-    background-color: #31b545;
+    background-color: #E84E0E;
     color: #fff;
-    transition: background-color 0.07s;
-  }
-  
-  button:active {
-    background-color: #31a442;
+    font-size: 1.1rem;
   }
