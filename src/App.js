@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useTelegramWebApp } from 'react-telegram-webapp';
 import './App.css';
-import Button from './components/Button';
+import Button from './components/Button/Button';
 import GradientEllipse from './components/GradientEllipse/GradientEllipse';
 import RoundButton from './components/RoundButton/RoundButton';
 import TextContainer from './components/TextField/TextContainer';

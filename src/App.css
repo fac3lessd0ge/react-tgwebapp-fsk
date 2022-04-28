@@ -23,6 +23,6 @@ main {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   gap: 2.5rem;
-  margin-top: 62px;
-  margin-bottom: 83px;
+  margin-top: 15%;
+  margin-bottom: 20%;
 }
