@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './RoundButton.css';
 
-const RoundButton = ({ isActive, children }) => {
+const RoundButton = ({ isActive, children, choiceHandler }) => {
     const [active, setActive] = React.useState(isActive);
 
     const clickHandler = (event) => {
         setActive(() => !active);
     }
+
+    useEffect(() => {
+        choiceHandler(children.toString(), active);
+    }, [active, children])
 
     const classes = `round-button${active ? ' active' : ''}`
 

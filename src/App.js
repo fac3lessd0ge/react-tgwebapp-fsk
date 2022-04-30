@@ -9,11 +9,22 @@ import TextContainer from './components/TextField/TextContainer';
 const App = () => {
 	const [message, setMessage] = React.useState('')
 
+	const [rooms, setRooms] = React.useState([])
+
 	const webApp = useTelegramWebApp();
 
 	const buttonClickHandler = (e) => {
 		console.log(webApp);
-		webApp.sendData(message);
+		webApp.sendData(rooms.sort().join(''));
+	}
+
+	const roomChoiceHandler = (room, isActive) => {
+		if (isActive) {
+			setRooms(() => [...rooms, room])
+		}
+		else {
+			setRooms(() => rooms.filter((element) => element !== room))
+		}
 	}
 
 	return (
@@ -30,7 +41,7 @@ const App = () => {
 				</TextContainer>
 				<div className="grid-wrapper">
 					{['С', 1, 2, 3, 4, 5].map((element) => (
-						<RoundButton>{element}</RoundButton>
+						<RoundButton choiceHandler={roomChoiceHandler}>{element}</RoundButton>
 					))}
 				</div>
 				<Button
