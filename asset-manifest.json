@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/testreactjs/static/css/main.24c04fb1.css",
-    "main.js": "/testreactjs/static/js/main.ae5f979b.js",
+    "main.css": "/testreactjs/static/css/main.37671068.css",
+    "main.js": "/testreactjs/static/js/main.04a9ce09.js",
     "static/media/FuturaFuturisC.ttf": "/testreactjs/static/media/FuturaFuturisC.c385a93ba98cd8fb5edf.ttf",
     "static/media/FuturaFuturisLightC.ttf": "/testreactjs/static/media/FuturaFuturisLightC.7caf1a7934754ac63462.ttf",
     "static/media/FuturaFuturisC.woff": "/testreactjs/static/media/FuturaFuturisC.84558269f6650f29301c.woff",
@@ -9,11 +9,11 @@
     "static/media/FuturaFuturisC.woff2": "/testreactjs/static/media/FuturaFuturisC.78d2feb6490ca93506c8.woff2",
     "static/media/FuturaFuturisLightC.woff2": "/testreactjs/static/media/FuturaFuturisLightC.a7797084d8c5586feaa7.woff2",
     "index.html": "/testreactjs/index.html",
-    "main.24c04fb1.css.map": "/testreactjs/static/css/main.24c04fb1.css.map",
-    "main.ae5f979b.js.map": "/testreactjs/static/js/main.ae5f979b.js.map"
+    "main.37671068.css.map": "/testreactjs/static/css/main.37671068.css.map",
+    "main.04a9ce09.js.map": "/testreactjs/static/js/main.04a9ce09.js.map"
   },
   "entrypoints": [
-    "static/css/main.24c04fb1.css",
-    "static/js/main.ae5f979b.js"
+    "static/css/main.37671068.css",
+    "static/js/main.04a9ce09.js"
   ]
 }
