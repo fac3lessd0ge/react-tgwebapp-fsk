@@ -26,3 +26,23 @@ main {
   margin-top: 10vh;
   margin-bottom: 15vh;
 }
+
+
+@media (max-height: 450px) {
+    .content {
+      padding-top: 0;
+    }
+    .grid-wrapper {
+      margin-top: 1vh;
+      margin-bottom: 1vh;
+    }
+}
+@media (max-height: 500px) {
+  .content {
+    padding-top: 2vh;
+  }
+  .grid-wrapper {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+}
