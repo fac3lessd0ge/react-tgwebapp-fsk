@@ -14,7 +14,3 @@ body {
 html, body, #root {
   height: 100%;
 }
-
-a {
-  height: 1.1rem;
-}

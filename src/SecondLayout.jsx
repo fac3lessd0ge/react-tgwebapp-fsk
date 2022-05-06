@@ -5,11 +5,11 @@ import Button from './components/Button/Button';
 
 
 const style = {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: '1rem',
+    display: 'grid',
+    gridTemplateRows: '3rem 3rem',
+    gap: '1rem',
+    placeItems: 'center',
+    marginTop: '3rem',
     width: '50%'
 }
 
@@ -20,8 +20,8 @@ const SecondLayout = () => {
                 {'Будет ли использовано ипотечное финансирование?'.toUpperCase()}
             </TextContainer>
             <div style={style}>
-            <Button innerText={'Да'}linkToPath=''/>
-            <Button innerText={'Нет'} linkToPath=''/>
+            <Button innerText={'Да'}linkToPath='/testreactjs/third'/>
+            <Button innerText={'Нет'} linkToPath='/testreactjs/third'/>
             </div>
             
         </StandartLayout>

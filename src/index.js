@@ -5,7 +5,8 @@ import App from './App';
 import { TelegramWebApp } from 'react-telegram-webapp';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './fonts/FuturaFuturis/style.css';
-import SecondLayout from './Secons';
+import SecondLayout from './SecondLayout';
+import ThirdLayout from './ThirdLayout';
 
 async function validateHash(hash) {
 	const response = {
@@ -22,6 +23,7 @@ root.render(
 			<Routes>
 				<Route path="/testreactjs/" element={<App />} />
 				<Route path='/testreactjs/second' element={ <SecondLayout /> } />
+				<Route path='/testreactjs/third' element={<ThirdLayout />} />
 			</Routes>
 		</BrowserRouter>
 	</TelegramWebApp>
