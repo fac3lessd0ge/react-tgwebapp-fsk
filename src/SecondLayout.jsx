@@ -2,6 +2,7 @@ import React from 'react';
 import TextContainer from './components/TextField/TextContainer';
 import StandartLayout from './StandartLayout';
 import Button from './components/Button/Button';
+import './SecondLayout.css'
 
 
 const style = {
@@ -20,8 +21,8 @@ const SecondLayout = () => {
                 {'Будет ли использовано ипотечное финансирование?'.toUpperCase()}
             </TextContainer>
             <div style={style}>
-            <Button innerText={'Да'}linkToPath='/testreactjs/third'/>
-            <Button innerText={'Нет'} linkToPath='/testreactjs/third'/>
+            <Button className='medium' innerText={'Да'} linkToPath='/testreactjs/third'/>
+            <Button className='medium' innerText={'Нет'} linkToPath='/testreactjs/third'/>
             </div>
             
         </StandartLayout>

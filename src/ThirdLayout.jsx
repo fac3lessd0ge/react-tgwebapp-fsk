@@ -4,6 +4,7 @@ import StandartLayout from './StandartLayout';
 import Button from './components/Button/Button';
 import { TwoThumbInputRange } from 'react-two-thumb-input-range';
 import thumbs from './thumbs.svg'
+import './ThirdLayout.css'
 
 
 const style = {
@@ -28,6 +29,10 @@ const labelStyle = {
     backgroundColor: '#14141400'
 }
 
+const labelTextStyle = {
+    content: '"(мил.)"'
+}
+
 const inputStyle = {
     width: '50vw',
     height: '2px'
@@ -42,26 +47,19 @@ const ThirdLayout = () => {
 
     return (
         <StandartLayout>
-            <TextContainer>
+            <TextContainer style={{marginBottom: '6vh'}}>
                 {'В каком ценовом диапазоне вы ищете квартиру?'.toUpperCase()}
             </TextContainer>
+            <TextContainer style={{marginBottom: '6vh', color: '#727272', fontWeight: '300', letterSpacing: '0.05rem'}}>
+                {'Выберите ценовую категорию'}
+            </TextContainer>
             <br/>
-            <div 
-                style={
-                    {
-                        width: '50%',
-                        height: '10rem',
-                        background: 'url(thumbs.svg)'
-                    }
-                }
-            >
-
-            </div>
-            <TwoThumbInputRange 
+            <TwoThumbInputRange
+                className='range' 
                 onChange={onValueChange}
                 values={value}
                 min={0}
-                max={50}
+                max={30}
                 railColor='#727272'
                 trackColor='#E84E0E'
                 thumbColor='#E84E0E'
@@ -69,6 +67,7 @@ const ThirdLayout = () => {
                 thumbStyle={thumbStyle}
                 inputStyle={inputStyle}
                 labelStyle={labelStyle}
+                labelTextStyle={labelTextStyle}
             />
             <br/>
             <Button innerText={'Подтвердить'} linkToPath=''/>

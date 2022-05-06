@@ -1,10 +1,10 @@
 import React from 'react';
 import './TextContainer.css';
 
-const TextContainer = ( { children, fontSize = '1.8rem' }) => {
+const TextContainer = ( { children, fontSize = '1.8rem', style }) => {
     return (
-        <div className='text-container'>
-            <span style={{ fontSize: fontSize }}>
+        <div style={style} className='text-container'>
+            <span style={{...style, fontSize: fontSize }}>
                 {children}
             </span>
         </div>
