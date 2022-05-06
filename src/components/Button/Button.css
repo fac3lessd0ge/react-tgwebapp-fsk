@@ -3,10 +3,15 @@ button {
     border-radius: 3rem;
     height: 3rem;
     min-width: 100px;
-    width: 242px;
+    width: 40vw;
+    max-width: 300px;
     border: none;
     background-color: #E84E0E;
     color: #fff;
     font-size: 1.1rem;
     margin-bottom: 1rem
-  }
+}
+
+button:hover {
+  cursor: pointer
+}

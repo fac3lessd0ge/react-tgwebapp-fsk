@@ -41,12 +41,13 @@ const App = () => {
 				</TextContainer>
 				<div className="grid-wrapper">
 					{['С', 1, 2, 3, 4, 5].map((element) => (
-						<RoundButton choiceHandler={roomChoiceHandler}>{element}</RoundButton>
+						<RoundButton key={element} choiceHandler={roomChoiceHandler}>{element}</RoundButton>
 					))}
 				</div>
 				<Button
 					innerText={'ВЫБРАТЬ'}
 					clickHandler={buttonClickHandler}
+					linkToPath={'/testreactjs/second'}
 				/>
 				{message}
 				<GradientEllipse />

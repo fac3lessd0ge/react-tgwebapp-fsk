@@ -1,11 +1,15 @@
 import React from 'react';
 import './Button.css';
+import { Link } from 'react-router-dom';
 
-const Button = ({ innerText, clickHandler}) => {
+const Button = ({ innerText, clickHandler, linkToPath }) => {
     return (
-        <button onClick={clickHandler}>
-            {innerText}
-        </button>
+        <Link to={linkToPath}>
+            <button onClick={clickHandler}>
+                {innerText}
+            </button>
+        </Link>
+        
     );
 }
  
