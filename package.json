@@ -4,6 +4,7 @@
   "homepage": "https://fac3lessd0ge.github.io/testreactjs",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.9.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
@@ -12,6 +13,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-telegram-webapp": "^0.1.3",
+    "react-two-thumb-input-range": "^1.0.7",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
