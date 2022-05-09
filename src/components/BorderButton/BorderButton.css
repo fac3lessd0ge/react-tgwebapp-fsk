@@ -1,0 +1,21 @@
+.default {
+    border: 1px solid #E84E0E;
+    background-color: #141414;
+    padding: 4vh 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    max-width: 75vw;
+}
+
+.active {
+    background-color: #fff;
+    padding: 4vh 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    max-width: 75vw;
+    color: #E84E0E;
+}

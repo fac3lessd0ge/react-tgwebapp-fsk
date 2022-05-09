@@ -7,6 +7,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './fonts/FuturaFuturis/style.css';
 import SecondLayout from './SecondLayout';
 import ThirdLayout from './ThirdLayout';
+import FourthLayout from './FourthLayout';
+import FifthLayout from './FifthLayout';
 
 async function validateHash(hash) {
 	const response = {
@@ -24,6 +26,8 @@ root.render(
 				<Route path="/testreactjs/" element={<App />} />
 				<Route path='/testreactjs/second' element={ <SecondLayout /> } />
 				<Route path='/testreactjs/third' element={<ThirdLayout />} />
+				<Route path='/testreactjs/fourth' element={<FourthLayout />} />
+				<Route path='/testreactjs/fifth' element={<FifthLayout />} />
 			</Routes>
 		</BrowserRouter>
 	</TelegramWebApp>
