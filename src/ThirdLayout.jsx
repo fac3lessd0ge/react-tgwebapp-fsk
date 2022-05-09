@@ -7,14 +7,14 @@ import thumbs from './thumbs.svg'
 import './ThirdLayout.css'
 
 
-const style = {
-    display: 'grid',
-    gridTemplateRows: '3rem 3rem',
-    gap: '1rem',
-    placeItems: 'center',
-    marginTop: '3rem',
-    width: '50%'
-}
+// const style = {
+//     display: 'grid',
+//     gridTemplateRows: '3rem 3rem',
+//     gap: '1rem',
+//     placeItems: 'center',
+//     marginTop: '3rem',
+//     width: '50%'
+// }
 
 const thumbStyle = {
     width: '2rem',
@@ -70,7 +70,7 @@ const ThirdLayout = () => {
                 labelTextStyle={labelTextStyle}
             />
             <br/>
-            <Button innerText={'Подтвердить'} linkToPath=''/>
+            <Button innerText={'Подтвердить'} linkToPath='/testreactjs/fourth'/>
             
         </StandartLayout>
     );
