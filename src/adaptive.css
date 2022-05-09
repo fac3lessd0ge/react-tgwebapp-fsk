@@ -1,0 +1,19 @@
+
+@media screen and (max-width: 350px) {
+    span, button {
+        font-size: 1.3rem;
+    }
+
+    .round-button {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .btn-container > button > span {
+        font-size: 0.8rem !important;
+    }
+
+    .adaptive {
+        font-size: 1rem !important;
+    }
+}

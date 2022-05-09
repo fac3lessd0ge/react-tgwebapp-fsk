@@ -9,6 +9,7 @@ import SecondLayout from './SecondLayout';
 import ThirdLayout from './ThirdLayout';
 import FourthLayout from './FourthLayout';
 import FifthLayout from './FifthLayout';
+import './adaptive.css'
 
 async function validateHash(hash) {
 	const response = {

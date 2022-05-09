@@ -17,7 +17,7 @@ const RoundButton = ({ isActive, children, choiceHandler }) => {
 
     return (
         <div className={classes} onClick={clickHandler}>
-            {children}
+            <span>{children}</span>
         </div>
     );
 }

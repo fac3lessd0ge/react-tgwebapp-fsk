@@ -18,7 +18,7 @@ const BorderButton = ({className, style, children}) => {
 
     return (
         <button onClick={clickHandler} style={style} className={classes}>
-            {children}
+            <span style={{fontSize:'1.1rem'}}>{children}</span>
         </button>
     );
 }

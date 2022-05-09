@@ -11,7 +11,7 @@ import './FourthLayout.css';
 const style = {
     display: 'grid',
     placeItems: 'center',
-    marginTop: '3rem',
+    marginTop: '3vh',
     marginBottom: '1vh'
 }
 

@@ -31,10 +31,10 @@ const FifthLayout = () => {
 
     return (
 		<StandartLayout>
-			<TextContainer>
+			<TextContainer className="adaptive">
 				{'На основе ваших ответов мы подобрали несколько вариантов подходящих квартир.'.toUpperCase()}
 			</TextContainer>
-            <TextContainer style={{margin:'6% 0 0 0', fontWeight: '300', letterSpacing: '0.05rem'}}>
+            <TextContainer className="adaptive" style={{margin:'6% 2% 0 2%', fontWeight: '300', letterSpacing: '0.05rem'}}>
                 {'Пожалуйста, оставьте свой номер телефона, чтобы мы могли с вами связаться для конусльтации.'}
             </TextContainer>
             <PhoneInput
