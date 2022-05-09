@@ -9,7 +9,7 @@ const BorderButton = ({className, style, children}) => {
 
     const clickHandler = (e) => {
         if (classes.includes('default')) {
-            setClasses('active')
+            setClasses('chosen')
         }
         else {
             setClasses('default')

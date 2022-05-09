@@ -6,9 +6,6 @@ import PhoneInput from 'react-phone-number-input/input';
 
 
 const style = {
-    display: 'grid',
-    placeItems: 'center',
-    marginTop: '3rem',
     marginBottom: '3rem'
 }
 
@@ -47,9 +44,6 @@ const FifthLayout = () => {
                 withCountryCallingCode
                 value={phoneNumber}
                 onChange={setPhoneNumber} />
-
-			<div style={style}>
-			</div>
             <Button innerText={'ВЫБРАТЬ'} linkToPath="" />
 		</StandartLayout>
 	);

@@ -5,17 +5,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 320px;
+    width: 340px;
     max-width: 75vw;
 }
 
-.active {
+.chosen {
+    border: 1px solid #fff;
     background-color: #fff;
     padding: 4vh 5vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 320px;
+    width: 340px;
     max-width: 75vw;
     color: #E84E0E;
 }
