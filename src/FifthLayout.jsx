@@ -3,11 +3,12 @@ import TextContainer from './components/TextField/TextContainer';
 import StandartLayout from './StandartLayout';
 import Button from './components/Button/Button';
 import PhoneInput from 'react-phone-number-input/input';
+import StepsContainer from './components/StepsContainer/StepsContainer';
 
 
-const style = {
-    marginBottom: '3rem'
-}
+// const style = {
+//     marginBottom: '3rem'
+// }
 
 const inputStyle = {
     marginTop: '1.5rem',
@@ -45,6 +46,7 @@ const FifthLayout = () => {
                 value={phoneNumber}
                 onChange={setPhoneNumber} />
             <Button innerText={'ВЫБРАТЬ'} linkToPath="" />
+            <StepsContainer currentIndex={4}/>
 		</StandartLayout>
 	);
 }

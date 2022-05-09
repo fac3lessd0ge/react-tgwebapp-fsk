@@ -1,0 +1,10 @@
+.step {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #727272;
+}
+
+.current {
+    background-color: #141414;
+}

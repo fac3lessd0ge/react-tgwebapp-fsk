@@ -4,6 +4,7 @@ import './App.css';
 import Button from './components/Button/Button';
 import GradientEllipse from './components/GradientEllipse/GradientEllipse';
 import RoundButton from './components/RoundButton/RoundButton';
+import StepsContainer from './components/StepsContainer/StepsContainer';
 import TextContainer from './components/TextField/TextContainer';
 
 const App = () => {
@@ -50,6 +51,7 @@ const App = () => {
 					linkToPath={'/testreactjs/second'}
 				/>
 				{message}
+				<StepsContainer currentIndex={0}/>
 				<GradientEllipse />
 			</div>
 		</main>

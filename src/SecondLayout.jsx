@@ -2,6 +2,7 @@ import React from 'react';
 import TextContainer from './components/TextField/TextContainer';
 import StandartLayout from './StandartLayout';
 import Button from './components/Button/Button';
+import StepsContainer from './components/StepsContainer/StepsContainer';
 import './SecondLayout.css'
 
 
@@ -21,10 +22,10 @@ const SecondLayout = () => {
                 {'Будет ли использовано ипотечное финансирование?'.toUpperCase()}
             </TextContainer>
             <div style={style}>
-            <Button className='medium' innerText={'Да'} linkToPath='/testreactjs/third'/>
-            <Button className='medium' innerText={'Нет'} linkToPath='/testreactjs/third'/>
+                <Button className='medium' innerText={'Да'} linkToPath='/testreactjs/third'/>
+                <Button className='medium' innerText={'Нет'} linkToPath='/testreactjs/third'/>
             </div>
-            
+            <StepsContainer currentIndex={1}/>
         </StandartLayout>
     );
 }

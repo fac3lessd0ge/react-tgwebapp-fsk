@@ -1,3 +1,4 @@
 .medium {
-    width: 35vw;
+    width: 45vw;
+    max-width: 320px;
 }

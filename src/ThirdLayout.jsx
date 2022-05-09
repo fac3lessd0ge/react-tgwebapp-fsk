@@ -3,6 +3,7 @@ import TextContainer from './components/TextField/TextContainer';
 import StandartLayout from './StandartLayout';
 import Button from './components/Button/Button';
 import { TwoThumbInputRange } from 'react-two-thumb-input-range';
+import StepsContainer from './components/StepsContainer/StepsContainer';
 import thumbs from './thumbs.svg'
 import './ThirdLayout.css'
 
@@ -71,7 +72,7 @@ const ThirdLayout = () => {
             />
             <br/>
             <Button innerText={'Подтвердить'} linkToPath='/testreactjs/fourth'/>
-            
+            <StepsContainer currentIndex={2}/>
         </StandartLayout>
     );
 }

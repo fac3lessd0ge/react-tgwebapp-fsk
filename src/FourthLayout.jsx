@@ -4,6 +4,7 @@ import StandartLayout from './StandartLayout';
 import Button from './components/Button/Button';
 import './SecondLayout.css'
 import BorderButton from './components/BorderButton/BorderButton';
+import StepsContainer from './components/StepsContainer/StepsContainer';
 import './FourthLayout.css';
 
 
@@ -11,7 +12,7 @@ const style = {
     display: 'grid',
     placeItems: 'center',
     marginTop: '3rem',
-    marginBottom: '3rem'
+    marginBottom: '1vh'
 }
 
 const FourthLayout = () => {
@@ -28,6 +29,7 @@ const FourthLayout = () => {
 				<BorderButton className={'default'}>СРОК СДАЧИ НЕ ВАЖЕН</BorderButton>
 			</div>
             <Button innerText={'ВЫБРАТЬ'} linkToPath="/testreactjs/fifth" />
+			<StepsContainer currentIndex={3}/>
 		</StandartLayout>
 	);
 }
