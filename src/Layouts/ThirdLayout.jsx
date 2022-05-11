@@ -1,10 +1,10 @@
 import React from 'react';
-import TextContainer from './components/TextField/TextContainer';
+import TextContainer from '../components/TextField/TextContainer';
 import StandartLayout from './StandartLayout';
-import Button from './components/Button/Button';
+import Button from '../components/Button/Button';
 import { TwoThumbInputRange } from 'react-two-thumb-input-range';
-import StepsContainer from './components/StepsContainer/StepsContainer';
-import thumbs from './thumbs.svg'
+import StepsContainer from '../components/StepsContainer/StepsContainer';
+import thumbs from '../thumbs.svg'
 import './ThirdLayout.css'
 
 

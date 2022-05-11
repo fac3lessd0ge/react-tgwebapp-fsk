@@ -1,10 +1,10 @@
 import React from 'react';
-import TextContainer from './components/TextField/TextContainer';
+import TextContainer from '../components/TextField/TextContainer';
 import StandartLayout from './StandartLayout';
-import Button from './components/Button/Button';
+import Button from '../components/Button/Button';
 import './SecondLayout.css'
-import BorderButton from './components/BorderButton/BorderButton';
-import StepsContainer from './components/StepsContainer/StepsContainer';
+import BorderButton from '../components/BorderButton/BorderButton';
+import StepsContainer from '../components/StepsContainer/StepsContainer';
 import './FourthLayout.css';
 
 

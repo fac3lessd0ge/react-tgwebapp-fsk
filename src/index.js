@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './Layouts/App';
 import { TelegramWebApp } from 'react-telegram-webapp';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './fonts/FuturaFuturis/style.css';
-import SecondLayout from './SecondLayout';
-import ThirdLayout from './ThirdLayout';
-import FourthLayout from './FourthLayout';
-import FifthLayout from './FifthLayout';
+import SecondLayout from './Layouts/SecondLayout';
+import ThirdLayout from './Layouts/ThirdLayout';
+import FourthLayout from './Layouts/FourthLayout';
+import FifthLayout from './Layouts/FifthLayout';
 import './adaptive.css'
 
 async function validateHash(hash) {

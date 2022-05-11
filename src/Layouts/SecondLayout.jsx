@@ -1,8 +1,8 @@
 import React from 'react';
-import TextContainer from './components/TextField/TextContainer';
+import TextContainer from '../components/TextField/TextContainer';
 import StandartLayout from './StandartLayout';
-import Button from './components/Button/Button';
-import StepsContainer from './components/StepsContainer/StepsContainer';
+import Button from '../components/Button/Button';
+import StepsContainer from '../components/StepsContainer/StepsContainer';
 import './SecondLayout.css'
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import GradientEllipse from './components/GradientEllipse/GradientEllipse';
+import GradientEllipse from '../components/GradientEllipse/GradientEllipse';
 
 const StandartLayout = ({ children }) => {
     return (

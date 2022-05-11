@@ -1,9 +1,9 @@
 import React from 'react';
-import TextContainer from './components/TextField/TextContainer';
+import TextContainer from '../components/TextField/TextContainer';
 import StandartLayout from './StandartLayout';
-import Button from './components/Button/Button';
+import Button from '../components/Button/Button';
 import PhoneInput from 'react-phone-number-input/input';
-import StepsContainer from './components/StepsContainer/StepsContainer';
+import StepsContainer from '../components/StepsContainer/StepsContainer';
 
 
 // const style = {
