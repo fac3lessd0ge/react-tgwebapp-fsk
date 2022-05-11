@@ -37,7 +37,7 @@ root.render(
 				<Route 
 					exact 
 					path="/testreactjs/" 
-					element={loggedIn.current ? <Navigate replace to={linksTo[loggedIn.page]}/> : <App />} 
+					element={loggedIn.page ? <Navigate replace to={linksTo[loggedIn.page]}/> : <App />} 
 				/>
 				<Route path='/testreactjs/second' element={ <SecondLayout /> } />
 				<Route path='/testreactjs/third' element={<ThirdLayout />} />
