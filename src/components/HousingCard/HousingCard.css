@@ -1,8 +1,9 @@
 .wrapper-card {
     color: #fff;
-    margin-top: 5%;
     position: relative;
     width: 100%;
+    max-width: 500px;
+    margin: 5% auto 0 auto;
 }
 
 .upper-categories {

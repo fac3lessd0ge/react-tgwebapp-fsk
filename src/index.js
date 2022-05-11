@@ -20,10 +20,10 @@ async function validateHash(hash) {
 	return response.ok;
 }
 
-const loggedIn = { page : 4 } // [0, 1, 2, 3, 4, 5]
+const loggedIn = { page : 0 } // [0, 1, 2, 3, 4, 5]
 
 const linksTo = {
-	1: '/testreactjs/', 
+	1: '', 
 	2: '/testreactjs/second',
 	3: '/testreactjs/third',
 	4: '/testreactjs/fourth',
@@ -37,7 +37,7 @@ root.render(
 			<Routes>
 				<Route 
 					exact 
-					path="/testreactjs/" 
+					path="/testreactjs" 
 					element={loggedIn.page ? <Navigate replace to={linksTo[loggedIn.page]}/> : <App />} 
 				/>
 				<Route path='/testreactjs/second' element={ <SecondLayout /> } />
