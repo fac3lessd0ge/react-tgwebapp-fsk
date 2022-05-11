@@ -10,6 +10,7 @@ import ThirdLayout from './Layouts/ThirdLayout';
 import FourthLayout from './Layouts/FourthLayout';
 import FifthLayout from './Layouts/FifthLayout';
 import './adaptive.css'
+import Feed from './Layouts/Feed';
 
 async function validateHash(hash) {
 	const response = {
@@ -43,6 +44,7 @@ root.render(
 				<Route path='/testreactjs/third' element={<ThirdLayout />} />
 				<Route path='/testreactjs/fourth' element={<FourthLayout />} />
 				<Route path='/testreactjs/fifth' element={<FifthLayout />} />
+				<Route path='/testreactjs/feed' element={<Feed />} />
 			</Routes>
 		</BrowserRouter>
 	</TelegramWebApp>

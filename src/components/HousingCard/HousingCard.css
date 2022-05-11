@@ -1,0 +1,84 @@
+.wrapper-card {
+    color: #fff;
+    margin-top: 5%;
+    position: relative;
+    width: 100%;
+}
+
+.upper-categories {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    display: flex;
+    flex-direction: row;
+}
+
+.center-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+img {
+    width: 95%;
+}
+
+.lower-info {
+    margin-left: 36px;
+}
+
+.title {
+    margin-top: 22px;
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.location-info {
+    display: flex;
+    flex-direction: rows;
+    gap: 25px;
+    font-weight: 300;
+    margin-top: 7px;
+}
+
+.metro-icon {
+    width: 10px;
+    height: 10px;
+    background-color: #E84E0E;
+    border-radius: 50%;
+    content: '';
+}
+.metro-info {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+    align-items: center;
+}
+
+.walk-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.price {
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+img {
+    border-radius: 15px;
+}
+
+.category {
+    padding: 10px 15px;
+}
+
+.orange {
+    background-color: #E84E0E;
+}
+
+.grey {
+    background-color: #3F3F40;
+}
+

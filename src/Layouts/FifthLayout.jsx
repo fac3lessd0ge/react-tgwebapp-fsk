@@ -45,7 +45,7 @@ const FifthLayout = () => {
                 withCountryCallingCode
                 value={phoneNumber}
                 onChange={setPhoneNumber} />
-            <Button innerText={'ВЫБРАТЬ'} linkToPath="" />
+            <Button innerText={'ВЫБРАТЬ'} linkToPath="/testreactjs/feed" />
             <StepsContainer currentIndex={4}/>
 		</StandartLayout>
 	);
