@@ -8,7 +8,7 @@ import { InitDataContext } from '../InitDataProvider';
 
 
 import axios from 'axios';
-import { BASE_URL_SURVEY } from '../URL';
+import { BASE_URL_SURVEY, BASE_URL_SURVEY_END } from '../URL';
 
 
 // const style = {
@@ -38,6 +38,8 @@ const FifthLayout = () => {
 
     const clickHandler = (e) => {
         axios.post(BASE_URL_SURVEY, {_auth: initData ,number: String(phoneNumber), page: 5});
+        
+        axios.post(BASE_URL_SURVEY_END, {_auth: initData });
     } 
 
     return (
