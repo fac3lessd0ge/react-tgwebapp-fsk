@@ -27,7 +27,7 @@ const Redirect = () => {
             const dat = res.data.page;
             setCurrentPage(dat);
         })
-    }, [])
+    }, [webApp])
 
     return (
         <Navigate replace to={linksTo[currentPage] || linksTo[0]}/>

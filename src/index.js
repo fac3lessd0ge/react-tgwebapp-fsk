@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './Layouts/App';
 import { TelegramWebApp } from 'react-telegram-webapp';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import './fonts/FuturaFuturis/style.css';
 import SecondLayout from './Layouts/SecondLayout';
 import ThirdLayout from './Layouts/ThirdLayout';
@@ -22,9 +22,6 @@ async function validateHash(hash) {
 
 	return response.ok;
 }
-
-const loggedIn = { page : 0 } // [0, 1, 2, 3, 4, 5]
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
