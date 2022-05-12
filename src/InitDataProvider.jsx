@@ -7,7 +7,7 @@ const InitDataProvider = ({ children }) => {
     const webApp = useTelegramWebApp()
 
     return (
-        <InitDataContext.Provider value={{ initData: webApp.initData}}>{children}</InitDataContext.Provider>
+        <InitDataContext.Provider value={{ initData: webApp.initData, test: 'pososi'}}>{children}</InitDataContext.Provider>
     );
 }
  

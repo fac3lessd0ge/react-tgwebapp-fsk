@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -10,10 +11,18 @@
     />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>React App</title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
   </head>
   <body>
+    
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div class="test">
+
+    </div>
     <div id="root"></div>
+    <script>
+      console.log(123, Telegram.WebApp.initData)
+      let test = document.getElementsByClassName('test')[0];
+      test.innerHTML = Telegram.WebApp.initData ? Telegram.WebApp.initData : 'тут тоже ничего нет'
+    </script>
   </body>
 </html>
