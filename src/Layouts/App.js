@@ -39,7 +39,7 @@ const App = () => {
 					СКОЛЬКО КОМНАТ ДОЛЖНО БЫТЬ В <br /> КВАРТИРЕ?
 				</TextContainer>
 				<div className="grid-wrapper">
-					{['С', 1, 2, 3, 4, 5].map((element) => (
+					{['C', 1, 2, 3, 4, 5].map((element) => (
 						<RoundButton key={element} choiceHandler={roomChoiceHandler}>{element}</RoundButton>
 					))}
 				</div>
