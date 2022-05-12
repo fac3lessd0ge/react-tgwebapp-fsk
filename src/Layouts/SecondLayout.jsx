@@ -1,9 +1,9 @@
 import React from 'react';
 import TextContainer from '../components/TextField/TextContainer';
-import { useTelegramWebApp } from 'react-telegram-webapp';
 import StandartLayout from './StandartLayout';
 import Button from '../components/Button/Button';
 import StepsContainer from '../components/StepsContainer/StepsContainer';
+import { InitDataContext } from '../InitDataProvider';
 
 import axios from 'axios';
 import { BASE_URL_SURVEY } from '../URL';
@@ -22,19 +22,19 @@ const style = {
 
 const SecondLayout = () => {
 
-    const webApp = useTelegramWebApp();
+    const { initData } = React.useContext(InitDataContext);
 
     const clickHandlerYes = (e) => {
-        axios.post(BASE_URL_SURVEY, {_auth: webApp.initData ,financing: 'yes', page: 2});
+        axios.post(BASE_URL_SURVEY, {_auth: initData ,financing: 'yes', page: 2});
     }
 
     const clickHandlerNo = (e) => {
-        axios.post(BASE_URL_SURVEY, {_auth: webApp.initData ,financing: 'no', page: 2});
+        axios.post(BASE_URL_SURVEY, {_auth: initData ,financing: 'no', page: 2});
     }
 
     return (
         <StandartLayout>
-            {webApp.initData}
+            {initData}
             <TextContainer>
                 {'Будет ли использовано ипотечное финансирование?'.toUpperCase()}
             </TextContainer>

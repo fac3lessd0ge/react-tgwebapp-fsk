@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { useTelegramWebApp } from 'react-telegram-webapp';
 import './App.css';
 import Button from '../components/Button/Button';
 import GradientEllipse from '../components/GradientEllipse/GradientEllipse';
@@ -8,15 +7,16 @@ import StepsContainer from '../components/StepsContainer/StepsContainer';
 import TextContainer from '../components/TextField/TextContainer';
 import axios from 'axios';
 import { BASE_URL_SURVEY } from '../URL';
+import { InitDataContext } from '../InitDataProvider';
 
 const App = () => {
 
 	const [rooms, setRooms] = React.useState([])
 
-	const webApp = useTelegramWebApp();
+	const { initData } = React.useContext(InitDataContext);
 
 	const buttonClickHandler = (e) => {
-		axios.post(BASE_URL_SURVEY, {_auth: webApp.initData ,rooms: String(rooms.join('')), page: 1});
+		axios.post(BASE_URL_SURVEY, {_auth: initData ,rooms: String(rooms.join('')), page: 1});
 	}
 
 	const roomChoiceHandler = (room, isActive) => {
@@ -33,7 +33,7 @@ const App = () => {
 	return (
 		<main className="App">
 			<div>
-			{webApp.initData}
+			{initData || 'нет тут ничего'}
 			</div>
 			
 			<div

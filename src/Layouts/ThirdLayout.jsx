@@ -1,10 +1,10 @@
 import React from 'react';
 import TextContainer from '../components/TextField/TextContainer';
-import { useTelegramWebApp } from 'react-telegram-webapp';
 import StandartLayout from './StandartLayout';
 import Button from '../components/Button/Button';
 import { TwoThumbInputRange } from 'react-two-thumb-input-range';
 import StepsContainer from '../components/StepsContainer/StepsContainer';
+import { InitDataContext } from '../InitDataProvider';
 
 import axios from 'axios';
 import { BASE_URL_SURVEY } from '../URL';
@@ -45,7 +45,6 @@ const inputStyle = {
 }
 
 const ThirdLayout = () => {
-    const webApp = useTelegramWebApp();
 
     const [value, setValue] = React.useState([7, 20])
 
@@ -55,13 +54,15 @@ const ThirdLayout = () => {
         } 
     }
 
+    const { initData } = React.useContext(InitDataContext);
+
     const clickHandler = (e) => {
-        axios.post(BASE_URL_SURVEY, {_auth: webApp.initData ,price_from: value[0], price_to: value[1], page: 3});
+        axios.post(BASE_URL_SURVEY, {_auth: initData ,price_from: value[0], price_to: value[1], page: 3});
     }
 
     return (
         <StandartLayout>
-            {webApp.initData}
+            {initData}
             <TextContainer style={{marginBottom: '6vh'}}>
                 {'В каком ценовом диапазоне вы ищете квартиру?'.toUpperCase()}
             </TextContainer>

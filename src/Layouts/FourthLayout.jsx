@@ -1,11 +1,11 @@
 import React from 'react';
 import TextContainer from '../components/TextField/TextContainer';
-import { useTelegramWebApp } from 'react-telegram-webapp';
 import StandartLayout from './StandartLayout';
 import Button from '../components/Button/Button';
 import './SecondLayout.css'
 import BorderButton from '../components/BorderButton/BorderButton';
 import StepsContainer from '../components/StepsContainer/StepsContainer';
+import { InitDataContext } from '../InitDataProvider';
 
 import axios from 'axios';
 import { BASE_URL_SURVEY } from '../URL';
@@ -23,7 +23,7 @@ const style = {
 
 const FourthLayout = () => {
 
-	const webApp = useTelegramWebApp();
+	const { initData } = React.useContext(InitDataContext);
 
 	const [current, setCurrent] = React.useState(null);
 
@@ -42,13 +42,13 @@ const FourthLayout = () => {
 	const variants = ['already', 'current_year', 'next_year', 'some_years', 'important']
 
 	const clickHandlerPost = (e) => {
-		axios.post(BASE_URL_SURVEY, {_auth: webApp.initData ,delivery_date: variants[current], page: 4});
+		axios.post(BASE_URL_SURVEY, {_auth: initData ,delivery_date: variants[current], page: 4});
 	}
 
 
     return (
 		<StandartLayout>
-			{webApp.initData}
+			{initData}
 			<TextContainer>
 				{'вам важно, чтобы объект был уже сдан'.toUpperCase()}
 			</TextContainer>

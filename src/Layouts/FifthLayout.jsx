@@ -1,10 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 import TextContainer from '../components/TextField/TextContainer';
-import { useTelegramWebApp } from 'react-telegram-webapp';
 import StandartLayout from './StandartLayout';
 import Button from '../components/Button/Button';
 import PhoneInput from 'react-phone-number-input/input';
 import StepsContainer from '../components/StepsContainer/StepsContainer';
+import { InitDataContext } from '../InitDataProvider';
 
 
 import axios from 'axios';
@@ -32,17 +32,17 @@ const inputStyle = {
 
 const FifthLayout = () => {
 
-    const webApp = useTelegramWebApp();
+    const { initData } = React.useContext(InitDataContext);
 
     const [phoneNumber, setPhoneNumber] = React.useState()
 
     const clickHandler = (e) => {
-        axios.post(BASE_URL_SURVEY, {_auth: webApp.initData ,number: String(phoneNumber), page: 5});
+        axios.post(BASE_URL_SURVEY, {_auth: initData ,number: String(phoneNumber), page: 5});
     } 
 
     return (
 		<StandartLayout>
-            {webApp.initData}
+            {initData}
 			<TextContainer className="adaptive">
 				{'На основе ваших ответов мы подобрали несколько вариантов подходящих квартир.'.toUpperCase()}
 			</TextContainer>

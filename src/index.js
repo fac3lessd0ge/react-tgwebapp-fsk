@@ -14,6 +14,7 @@ import FifthLayout from './Layouts/FifthLayout';
 import './adaptive.css'
 import Feed from './Layouts/Feed';
 import Redirect from './Redirect';
+import InitDataProvider from './InitDataProvider';
 
 async function validateHash(hash) {
 	const response = {
@@ -26,19 +27,30 @@ async function validateHash(hash) {
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<TelegramWebApp validateHash={validateHash}>
-		<BrowserRouter>
-			<Routes>
-				<Route  
-					path="/testreactjs" 
-					element={<Redirect />} 
-				/>
-				<Route path='/testreactjs/first' element={ <App /> } />
-				<Route path='/testreactjs/second' element={ <SecondLayout /> } />
-				<Route path='/testreactjs/third' element={<ThirdLayout />} />
-				<Route path='/testreactjs/fourth' element={<FourthLayout />} />
-				<Route path='/testreactjs/fifth' element={<FifthLayout />} />
-				<Route path='/testreactjs/feed' element={<Feed />} />
-			</Routes>
-		</BrowserRouter>
+		<InitDataProvider>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/testreactjs" element={<Redirect />} />
+					<Route path="/testreactjs/first" element={<App />} />
+					<Route
+						path="/testreactjs/second"
+						element={<SecondLayout />}
+					/>
+					<Route
+						path="/testreactjs/third"
+						element={<ThirdLayout />}
+					/>
+					<Route
+						path="/testreactjs/fourth"
+						element={<FourthLayout />}
+					/>
+					<Route
+						path="/testreactjs/fifth"
+						element={<FifthLayout />}
+					/>
+					<Route path="/testreactjs/feed" element={<Feed />} />
+				</Routes>
+			</BrowserRouter>
+		</InitDataProvider>
 	</TelegramWebApp>
 );

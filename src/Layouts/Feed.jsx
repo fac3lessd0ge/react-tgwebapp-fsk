@@ -1,30 +1,30 @@
 import React from 'react';
 import HousingCard from '../components/HousingCard/HousingCard';
+import { InitDataContext } from '../InitDataProvider';
 
 import axios from 'axios';
 import { BASE_URL_FEED } from '../URL';
 
-import { useTelegramWebApp } from 'react-telegram-webapp';
 
 
 const Feed = () => {
     const [response, setResponse] = React.useState([])
 
-    const webApp = useTelegramWebApp();
+    const { initData } = React.useContext(InitDataContext);
 
     React.useEffect(() => {
         axios.post(BASE_URL_FEED,{
-            _auth: webApp.initData
+            _auth: initData
         }).then((res) => {
             const dat = res.data.page;
             setResponse(dat);
         })
-    }, [webApp.initData])
+    }, [initData])
 
 
     return (
         <div>
-            {webApp.initData}
+            {initData}
             {response.map((element, index) => {
                 console.log(element);
 

@@ -11,6 +11,7 @@ const RoundButton = ({ isActive, children, choiceHandler }) => {
 
     useEffect(() => {
         choiceHandler(children.toString(), active);
+        // eslint-disable-next-line
     }, [active])
 
     const classes = `round-button${active ? ' active' : ''}`
