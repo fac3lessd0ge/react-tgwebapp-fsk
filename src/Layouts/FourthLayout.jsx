@@ -8,7 +8,7 @@ import BorderButton from '../components/BorderButton/BorderButton';
 import StepsContainer from '../components/StepsContainer/StepsContainer';
 
 import axios from 'axios';
-import { BASE_URL } from '../URL';
+import { BASE_URL_SURVEY } from '../URL';
 
 
 import './FourthLayout.css';
@@ -42,7 +42,7 @@ const FourthLayout = () => {
 	const variants = ['already', 'current_year', 'next_year', 'some_years', 'important']
 
 	const clickHandlerPost = (e) => {
-		axios.post(BASE_URL, {_auth: webApp.initData ,delivery_date: variants[current], page: 4});
+		axios.post(BASE_URL_SURVEY, {_auth: webApp.initData ,delivery_date: variants[current], page: 4});
 	}
 
 

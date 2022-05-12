@@ -6,7 +6,7 @@ import Button from '../components/Button/Button';
 import StepsContainer from '../components/StepsContainer/StepsContainer';
 
 import axios from 'axios';
-import { BASE_URL } from '../URL';
+import { BASE_URL_SURVEY } from '../URL';
 
 import './SecondLayout.css'
 
@@ -25,11 +25,11 @@ const SecondLayout = () => {
     const webApp = useTelegramWebApp();
 
     const clickHandlerYes = (e) => {
-        axios.post(BASE_URL, {_auth: webApp.initData ,financing: 'yes', page: 2});
+        axios.post(BASE_URL_SURVEY, {_auth: webApp.initData ,financing: 'yes', page: 2});
     }
 
     const clickHandlerNo = (e) => {
-        axios.post(BASE_URL, {_auth: webApp.initData ,financing: 'no', page: 2});
+        axios.post(BASE_URL_SURVEY, {_auth: webApp.initData ,financing: 'no', page: 2});
     }
 
     return (

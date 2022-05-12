@@ -8,7 +8,7 @@ import StepsContainer from '../components/StepsContainer/StepsContainer';
 
 
 import axios from 'axios';
-import { BASE_URL } from '../URL';
+import { BASE_URL_SURVEY } from '../URL';
 
 
 // const style = {
@@ -37,7 +37,7 @@ const FifthLayout = () => {
     const [phoneNumber, setPhoneNumber] = React.useState()
 
     const clickHandler = (e) => {
-        axios.post(BASE_URL, {_auth: webApp.initData ,number: String(phoneNumber), page: 5});
+        axios.post(BASE_URL_SURVEY, {_auth: webApp.initData ,number: String(phoneNumber), page: 5});
     } 
 
     return (

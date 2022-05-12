@@ -1,6 +1,11 @@
 import React from 'react';
 import HousingCard from '../components/HousingCard/HousingCard';
 
+import axios from 'axios';
+import { BASE_URL_FEED } from '../URL';
+
+import { useTelegramWebApp } from 'react-telegram-webapp';
+
 import img1 from '../fakeAPIImage1.png';
 import img2 from '../fakeAPIImage2.png';
 
@@ -60,24 +65,34 @@ const fakeAPICall = {
 }
 
 const Feed = () => {
+    const [response, setResponse] = React.useState([])
 
+    const webApp = useTelegramWebApp();
+
+    React.useEffect(() => {
+        axios.get(BASE_URL_FEED, {
+            _auth: webApp.initData
+        }).then((res) => {
+            const dat = res.data;
+            setResponse(dat);
+        })
+    }, [])
 
 
     return (
         <div>
-            {Object.keys(fakeAPICall).map((element, index) => { 
-                const info = fakeAPICall[Number(element)];
-                console.log(info.imgUrl);
+            {response.map((element, index) => {
+                console.log(element);
 
                 return <HousingCard 
                     key={index}
-                    imgUrl={info.imgUrl}
-                    startMark={info.UpperCategories.startMark}
-                    classCategory={info.UpperCategories.class}
-                    title={info.title}
-                    metro={info.locationDetails.metro}
-                    toMetroTime={info.locationDetails.toMetroTime}
-                    startingPrice={info.startingPrice}
+                    imgUrl={element[2].split('\\')[2]}
+                    startMark={'не пришло из бд'}
+                    classCategory={'не пришло из бд'}
+                    title={element[0]}
+                    metro={element[3]}
+                    toMetroTime={'не пришло из бд'}
+                    startingPrice={element[5]}
                 />
             })}
         </div>

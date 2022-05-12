@@ -9,8 +9,11 @@ import SecondLayout from './Layouts/SecondLayout';
 import ThirdLayout from './Layouts/ThirdLayout';
 import FourthLayout from './Layouts/FourthLayout';
 import FifthLayout from './Layouts/FifthLayout';
+
+
 import './adaptive.css'
 import Feed from './Layouts/Feed';
+import Redirect from './Redirect';
 
 async function validateHash(hash) {
 	const response = {
@@ -22,24 +25,17 @@ async function validateHash(hash) {
 
 const loggedIn = { page : 0 } // [0, 1, 2, 3, 4, 5]
 
-const linksTo = {
-	1: '', 
-	2: '/testreactjs/second',
-	3: '/testreactjs/third',
-	4: '/testreactjs/fourth',
-	5: '/testreactjs/fifth'
-}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
 	<TelegramWebApp validateHash={validateHash}>
 		<BrowserRouter>
 			<Routes>
-				<Route 
-					exact 
+				<Route  
 					path="/testreactjs" 
-					element={loggedIn.page ? <Navigate replace to={linksTo[loggedIn.page]}/> : <App />} 
+					element={<Redirect />} 
 				/>
+				<Route path='/testreactjs/first' element={ <App /> } />
 				<Route path='/testreactjs/second' element={ <SecondLayout /> } />
 				<Route path='/testreactjs/third' element={<ThirdLayout />} />
 				<Route path='/testreactjs/fourth' element={<FourthLayout />} />

@@ -7,7 +7,7 @@ import { TwoThumbInputRange } from 'react-two-thumb-input-range';
 import StepsContainer from '../components/StepsContainer/StepsContainer';
 
 import axios from 'axios';
-import { BASE_URL } from '../URL';
+import { BASE_URL_SURVEY } from '../URL';
 
 import thumbs from '../thumbs.svg'
 import './ThirdLayout.css'
@@ -56,7 +56,7 @@ const ThirdLayout = () => {
     }
 
     const clickHandler = (e) => {
-        axios.post(BASE_URL, {_auth: webApp.initData ,price_from: value[0], price_to: value[1], page: 3});
+        axios.post(BASE_URL_SURVEY, {_auth: webApp.initData ,price_from: value[0], price_to: value[1], page: 3});
     }
 
     return (

@@ -7,7 +7,7 @@ import RoundButton from '../components/RoundButton/RoundButton';
 import StepsContainer from '../components/StepsContainer/StepsContainer';
 import TextContainer from '../components/TextField/TextContainer';
 import axios from 'axios';
-import { BASE_URL } from '../URL';
+import { BASE_URL_SURVEY } from '../URL';
 
 const App = () => {
 
@@ -18,7 +18,7 @@ const App = () => {
 	const webApp = useTelegramWebApp();
 
 	const buttonClickHandler = (e) => {
-		axios.post(BASE_URL, {_auth: webApp.initData ,rooms: String(rooms.join('')), page: 1});
+		axios.post(BASE_URL_SURVEY, {_auth: webApp.initData ,rooms: String(rooms.join('')), page: 1});
 	}
 
 	const roomChoiceHandler = (room, isActive) => {
