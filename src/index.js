@@ -28,8 +28,8 @@ const initData = Telegram.WebApp.initData;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-	<TelegramWebApp initData={initData} validateHash={validateHash}>
-		<InitDataProvider>
+	<TelegramWebApp validateHash={validateHash}>
+		<InitDataProvider initData={initData}>
 			<BrowserRouter>
 				<Routes>
 					<Route path="/testreactjs" element={<Redirect />} />
