@@ -21,7 +21,7 @@ const Redirect = () => {
     const webApp = useTelegramWebApp();
 
     React.useEffect(() => {
-        axios.get(BASE_URL_PAGE, {
+        axios.post(BASE_URL_PAGE, {
             _auth: webApp.initData
         }).then((res) => {
             const dat = res.data.page;
