@@ -11,7 +11,7 @@ const RoundButton = ({ isActive, children, choiceHandler }) => {
 
     useEffect(() => {
         choiceHandler(children.toString(), active);
-    }, [active, children, choiceHandler])
+    }, [active])
 
     const classes = `round-button${active ? ' active' : ''}`
 

@@ -11,8 +11,6 @@ import { BASE_URL_SURVEY } from '../URL';
 
 const App = () => {
 
-	const [message, setMessage] = React.useState('')
-
 	const [rooms, setRooms] = React.useState([])
 
 	const webApp = useTelegramWebApp();
@@ -30,14 +28,12 @@ const App = () => {
 		}
 	}
 
+	React.useEffect(()=> {console.log(rooms);}, [rooms])
+
 	return (
 		<main className="App">
 			<div
 				className="content"
-				value={message}
-				onChange={(e) => {
-					setMessage(e.target.value);
-				}}
 			>
 				<TextContainer>
 					СКОЛЬКО КОМНАТ ДОЛЖНО БЫТЬ В <br /> КВАРТИРЕ?
@@ -52,7 +48,6 @@ const App = () => {
 					clickHandler={buttonClickHandler}
 					linkToPath={'/testreactjs/second'}
 				/>
-				{message}
 				<StepsContainer currentIndex={0}/>
 				<GradientEllipse />
 			</div>
