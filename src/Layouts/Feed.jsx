@@ -4,6 +4,7 @@ import { InitDataContext } from '../InitDataProvider';
 
 import axios from 'axios';
 import { BASE_URL_FEED } from '../URL';
+import TextContainer from '../components/TextField/TextContainer';
 
 
 
@@ -12,7 +13,7 @@ const Feed = () => {
 
     const { initData } = React.useContext(InitDataContext);
 
-    React.useEffect( () => {
+    React.useEffect(() => {
         axios.post(BASE_URL_FEED,{
             _auth: initData
         }).then((res) => 
@@ -23,9 +24,10 @@ const Feed = () => {
 
     return (
         <div>
-            {JSON.stringify(response)}
+            <TextContainer>{JSON.stringify(response)}</TextContainer>
+            
 
-            {response.map((element, index) => {
+            {/* {response.map((element, index) => {
                 console.log(element);
 
                 return <HousingCard 
@@ -38,7 +40,7 @@ const Feed = () => {
                     toMetroTime={'не пришло из бд'}
                     startingPrice={element[5]}
                 />
-            })}
+            })} */}
         </div>
     );
 }
