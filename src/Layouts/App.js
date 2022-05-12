@@ -32,6 +32,10 @@ const App = () => {
 
 	return (
 		<main className="App">
+			<div>
+			{webApp.initData}
+			</div>
+			
 			<div
 				className="content"
 			>

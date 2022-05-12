@@ -24,6 +24,7 @@ const Feed = () => {
 
     return (
         <div>
+            {webApp.initData}
             {response.map((element, index) => {
                 console.log(element);
 

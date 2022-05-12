@@ -34,6 +34,7 @@ const SecondLayout = () => {
 
     return (
         <StandartLayout>
+            {webApp.initData}
             <TextContainer>
                 {'Будет ли использовано ипотечное финансирование?'.toUpperCase()}
             </TextContainer>
