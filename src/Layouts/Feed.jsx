@@ -86,7 +86,7 @@ const Feed = () => {
 
                 return <HousingCard 
                     key={index}
-                    imgUrl={element[2].split('\\')[2]}
+                    imgUrl={element[2].split('"').filter((url) => url.length > 2)[0]}
                     startMark={'не пришло из бд'}
                     classCategory={'не пришло из бд'}
                     title={element[0]}
