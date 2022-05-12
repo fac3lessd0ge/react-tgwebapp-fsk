@@ -17,17 +17,14 @@ const Feed = () => {
         axios.post(BASE_URL_FEED,{
             _auth: initData
         }).then((res) => 
-            setResponse(res)
+            setResponse(res.data.apartments)
         )
     }, [])
 
 
     return (
         <div>
-            <TextContainer>{JSON.stringify(response)}</TextContainer>
-            
-
-            {/* {response.map((element, index) => {
+            {response.map((element, index) => {
                 console.log(element);
 
                 return <HousingCard 
@@ -40,7 +37,7 @@ const Feed = () => {
                     toMetroTime={'не пришло из бд'}
                     startingPrice={element[5]}
                 />
-            })} */}
+            })}
         </div>
     );
 }
