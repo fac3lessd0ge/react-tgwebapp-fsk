@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom';
 import { useTelegramWebApp } from 'react-telegram-webapp';
 
 import axios from 'axios';
-import { BASE_URL_PAGE } from '../URL';
+import { BASE_URL_PAGE } from './URL';
 
 const linksTo = {
 	1: '/testreactjs/first', 
@@ -21,16 +21,16 @@ const Redirect = () => {
     const webApp = useTelegramWebApp();
 
     React.useEffect(() => {
-        axios.get(BASE_URL_PAGE, {
+        axios.get(BASE_URL_PAGE, { params: {
             _auth: webApp.initData
-        }).then((res) => {
-            const dat = res.data;
+        }}).then((res) => {
+            const dat = res.data.page;
             setCurrentPage(dat);
         })
     }, [])
 
     return (
-        <Navigate replace to={linksTo[currentPage.page] || linksTo[0]}/>
+        <Navigate replace to={linksTo[currentPage] || linksTo[0]}/>
     );
 }
  

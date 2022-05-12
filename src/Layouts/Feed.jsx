@@ -70,10 +70,10 @@ const Feed = () => {
     const webApp = useTelegramWebApp();
 
     React.useEffect(() => {
-        axios.get(BASE_URL_FEED, {
+        axios.get(BASE_URL_FEED, { params: {
             _auth: webApp.initData
-        }).then((res) => {
-            const dat = res.data;
+        }}).then((res) => {
+            const dat = res.data.page;
             setResponse(dat);
         })
     }, [])
