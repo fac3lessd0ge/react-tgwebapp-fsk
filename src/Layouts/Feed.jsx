@@ -16,7 +16,7 @@ const Feed = () => {
         axios.post(BASE_URL_FEED,{
             _auth: initData
         }).then((res) => {
-            const dat = res.data.page;
+            const dat = res.data;
             setResponse(dat);
         })
     }, [initData])
