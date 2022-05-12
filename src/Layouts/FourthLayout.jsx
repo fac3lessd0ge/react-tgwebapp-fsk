@@ -1,5 +1,6 @@
 import React from 'react';
 import TextContainer from '../components/TextField/TextContainer';
+import { useTelegramWebApp } from 'react-telegram-webapp';
 import StandartLayout from './StandartLayout';
 import Button from '../components/Button/Button';
 import './SecondLayout.css'
@@ -21,8 +22,10 @@ const style = {
 }
 
 const FourthLayout = () => {
-	const [current, setCurrent] = React.useState(1);
 
+	const webApp = useTelegramWebApp();
+
+	const [current, setCurrent] = React.useState(1);
 
 	const strings = [
 		'ОБЪЕКТ ДОЛЖЕН БЫТЬ СДАН',
@@ -39,7 +42,7 @@ const FourthLayout = () => {
 	const variants = ['already', 'current_year', 'next_year', 'some_years', 'important']
 
 	const clickHandlerPost = (e) => {
-		axios.post(BASE_URL, {delivery_date: variants[current], page: 4});
+		axios.post(BASE_URL, {_auth: webApp.initData ,delivery_date: variants[current], page: 4});
 	}
 
 

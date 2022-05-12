@@ -1,5 +1,5 @@
 import * as React from 'react';
-// import { useTelegramWebApp } from 'react-telegram-webapp';
+import { useTelegramWebApp } from 'react-telegram-webapp';
 import './App.css';
 import Button from '../components/Button/Button';
 import GradientEllipse from '../components/GradientEllipse/GradientEllipse';
@@ -15,10 +15,10 @@ const App = () => {
 
 	const [rooms, setRooms] = React.useState([])
 
-	// const webApp = useTelegramWebApp();
+	const webApp = useTelegramWebApp();
 
 	const buttonClickHandler = (e) => {
-		axios.post(BASE_URL, {rooms: String(rooms.join('')), page: 1});
+		axios.post(BASE_URL, {_auth: webApp.initData ,rooms: String(rooms.join('')), page: 1});
 	}
 
 	const roomChoiceHandler = (room, isActive) => {

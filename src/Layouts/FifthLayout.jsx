@@ -1,5 +1,6 @@
 import React from 'react';
 import TextContainer from '../components/TextField/TextContainer';
+import { useTelegramWebApp } from 'react-telegram-webapp';
 import StandartLayout from './StandartLayout';
 import Button from '../components/Button/Button';
 import PhoneInput from 'react-phone-number-input/input';
@@ -31,10 +32,12 @@ const inputStyle = {
 
 const FifthLayout = () => {
 
+    const webApp = useTelegramWebApp();
+
     const [phoneNumber, setPhoneNumber] = React.useState()
 
     const clickHandler = (e) => {
-        axios.post(BASE_URL, {number: String(phoneNumber), page: 5});
+        axios.post(BASE_URL, {_auth: webApp.initData ,number: String(phoneNumber), page: 5});
     } 
 
     return (

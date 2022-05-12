@@ -1,5 +1,6 @@
 import React from 'react';
 import TextContainer from '../components/TextField/TextContainer';
+import { useTelegramWebApp } from 'react-telegram-webapp';
 import StandartLayout from './StandartLayout';
 import Button from '../components/Button/Button';
 import StepsContainer from '../components/StepsContainer/StepsContainer';
@@ -21,12 +22,14 @@ const style = {
 
 const SecondLayout = () => {
 
+    const webApp = useTelegramWebApp();
+
     const clickHandlerYes = (e) => {
-        axios.post(BASE_URL, {financing: 'yes', page: 2});
+        axios.post(BASE_URL, {_auth: webApp.initData ,financing: 'yes', page: 2});
     }
 
     const clickHandlerNo = (e) => {
-        axios.post(BASE_URL, {financing: 'no', page: 2});
+        axios.post(BASE_URL, {_auth: webApp.initData ,financing: 'no', page: 2});
     }
 
     return (

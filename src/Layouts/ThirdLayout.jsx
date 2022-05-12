@@ -1,5 +1,6 @@
 import React from 'react';
 import TextContainer from '../components/TextField/TextContainer';
+import { useTelegramWebApp } from 'react-telegram-webapp';
 import StandartLayout from './StandartLayout';
 import Button from '../components/Button/Button';
 import { TwoThumbInputRange } from 'react-two-thumb-input-range';
@@ -44,6 +45,8 @@ const inputStyle = {
 }
 
 const ThirdLayout = () => {
+    const webApp = useTelegramWebApp();
+
     const [value, setValue] = React.useState([7, 20])
 
     const onValueChange = (values) => {
@@ -53,7 +56,7 @@ const ThirdLayout = () => {
     }
 
     const clickHandler = (e) => {
-        axios.post(BASE_URL, {price_from: value[0], price_to: value[1], page: 3});
+        axios.post(BASE_URL, {_auth: webApp.initData ,price_from: value[0], price_to: value[1], page: 3});
     }
 
     return (
