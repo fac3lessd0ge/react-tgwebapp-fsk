@@ -3,11 +3,11 @@ import { useTelegramWebApp } from 'react-telegram-webapp';
 
 export const InitDataContext = createContext();
 
-const InitDataProvider = ({ children }) => {
+const InitDataProvider = ({ children, initialValue }) => {
     const webApp = useTelegramWebApp()
 
     return (
-        <InitDataContext.Provider value={{ initData: webApp.initData, test: 'ничего', initDataUnsafe: webApp.initDataUnsafe }}>{children}</InitDataContext.Provider>
+        <InitDataContext.Provider value={{ initData: initialValue }}>{children}</InitDataContext.Provider>
     );
 }
  

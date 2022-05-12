@@ -23,10 +23,12 @@ async function validateHash(hash) {
 
 	return response.ok;
 }
+/*global Telegram*/
+const initData = Telegram.WebApp.initData;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-	<TelegramWebApp validateHash={validateHash}>
+	<TelegramWebApp initData={initData} validateHash={validateHash}>
 		<InitDataProvider>
 			<BrowserRouter>
 				<Routes>
