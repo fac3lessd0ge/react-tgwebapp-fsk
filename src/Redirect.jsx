@@ -32,7 +32,7 @@ const Redirect = () => {
     }, [initData])
     return (
         <>
-            {currentPage && <Navigate replace to={linksTo[currentPage]}/>}
+            {(currentPage !== null) && <Navigate replace to={linksTo[currentPage]}/>}
         </>  
     );
 }
