@@ -13,18 +13,7 @@
     <title>React App</title>
   </head>
   <body>
-    
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div class="test">
-    </div>
-    <div class="test2"> </div>
     <div id="root"></div>
-    <script>
-      console.log(123, Telegram.WebApp.initData, Telegram.WebApp.initDataUnsafe)
-      let test = document.getElementsByClassName('test')[0];
-      test.innerHTML = Telegram.WebApp.initData ? JSON.stringify(Telegram.WebApp.initData) : 'тут тоже ничего нет (initData)'
-      let test2 = document.getElementsByClassName('test2')[0];
-      test2.innerHTML = Telegram.WebApp.initDataUnsafe ? JSON.stringify(Telegram.WebApp.initDataUnsafe) : 'тут тоже ничего нет (initDataUnsafe)'
-    </script>
   </body>
 </html>

@@ -13,7 +13,7 @@ const App = () => {
 
 	const [rooms, setRooms] = React.useState([])
 
-	const { initData, test, initDataUnsafe } = React.useContext(InitDataContext);
+	const { initData } = React.useContext(InitDataContext);
 
 	const buttonClickHandler = (e) => {
 		axios.post(BASE_URL_SURVEY, {_auth: initData ,rooms: String(rooms.join('')), page: 1});
@@ -32,11 +32,6 @@ const App = () => {
 
 	return (
 		<main className="App">
-			<div>
-			{initData || test}
-			{JSON.stringify(initDataUnsafe) || test}
-			</div>
-			
 			<div
 				className="content"
 			>
