@@ -1,7 +1,8 @@
-import React from 'react';
+import * as React from 'react';
 
 import { Navigate } from 'react-router-dom';
-import { useTelegramWebApp } from 'react-telegram-webapp';
+import { InitDataContext } from './InitDataProvider';
+
 
 import axios from 'axios';
 import { BASE_URL_PAGE } from './URL';
@@ -17,25 +18,22 @@ const linksTo = {
 }
 
 const Redirect = () => {
-    const [currentPage, setCurrentPage] = React.useState(0);
+    const [currentPage, setCurrentPage] = React.useState(null);
 
-    const webApp = useTelegramWebApp();
-
-    console.log(webApp);
+    const { initData } = React.useContext(InitDataContext);
 
     React.useEffect(() => {
         axios.post(BASE_URL_PAGE, {
-            _auth: webApp.initData
+            _auth: initData
         }).then((res) => {
             const dat = res.data.page;
             setCurrentPage(dat);
         })
-    }, [webApp])
-
-    console.log(currentPage);
-
+    }, [initData])
     return (
-        <Navigate replace to={linksTo[currentPage] || linksTo[0]}/>
+        <>
+            {currentPage && <Navigate replace to={linksTo[currentPage]}/>}
+        </>  
     );
 }
  

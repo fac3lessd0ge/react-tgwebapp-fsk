@@ -4,7 +4,6 @@ import { InitDataContext } from '../InitDataProvider';
 
 import axios from 'axios';
 import { BASE_URL_FEED } from '../URL';
-import TextContainer from '../components/TextField/TextContainer';
 
 
 
@@ -19,7 +18,7 @@ const Feed = () => {
         }).then((res) => 
             setResponse(res.data.apartments)
         )
-    }, [])
+    }, [initData])
 
 
     return (
