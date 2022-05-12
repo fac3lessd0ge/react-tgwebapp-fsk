@@ -6,6 +6,10 @@ import PhoneInput from 'react-phone-number-input/input';
 import StepsContainer from '../components/StepsContainer/StepsContainer';
 
 
+import axios from 'axios';
+import { BASE_URL } from '../URL';
+
+
 // const style = {
 //     marginBottom: '3rem'
 // }
@@ -29,6 +33,10 @@ const FifthLayout = () => {
 
     const [phoneNumber, setPhoneNumber] = React.useState()
 
+    const clickHandler = (e) => {
+        axios.post(BASE_URL, {number: String(phoneNumber), page: 5});
+    } 
+
     return (
 		<StandartLayout>
 			<TextContainer className="adaptive">
@@ -38,14 +46,15 @@ const FifthLayout = () => {
                 {'Пожалуйста, оставьте свой номер телефона, чтобы мы могли с вами связаться для конусльтации.'}
             </TextContainer>
             <PhoneInput
+                
                 style={inputStyle}
-                placeHolder='+7 (___)-___-__-__'
+                placeholder='+7 (___)-___-__-__'
                 country="RU"
                 international
                 withCountryCallingCode
                 value={phoneNumber}
                 onChange={setPhoneNumber} />
-            <Button innerText={'ВЫБРАТЬ'} linkToPath="/testreactjs/feed" />
+            <Button clickHandler={clickHandler} innerText={'ВЫБРАТЬ'} linkToPath="/testreactjs/feed" />
             <StepsContainer currentIndex={4}/>
 		</StandartLayout>
 	);

@@ -3,6 +3,10 @@ import TextContainer from '../components/TextField/TextContainer';
 import StandartLayout from './StandartLayout';
 import Button from '../components/Button/Button';
 import StepsContainer from '../components/StepsContainer/StepsContainer';
+
+import axios from 'axios';
+import { BASE_URL } from '../URL';
+
 import './SecondLayout.css'
 
 
@@ -16,14 +20,23 @@ const style = {
 }
 
 const SecondLayout = () => {
+
+    const clickHandlerYes = (e) => {
+        axios.post(BASE_URL, {financing: 'yes', page: 2});
+    }
+
+    const clickHandlerNo = (e) => {
+        axios.post(BASE_URL, {financing: 'no', page: 2});
+    }
+
     return (
         <StandartLayout>
             <TextContainer>
                 {'Будет ли использовано ипотечное финансирование?'.toUpperCase()}
             </TextContainer>
             <div style={style}>
-                <Button className='medium' innerText={'Да'} linkToPath='/testreactjs/third'/>
-                <Button className='medium' innerText={'Нет'} linkToPath='/testreactjs/third'/>
+                <Button className='medium' clickHandler={clickHandlerYes} innerText={'Да'} linkToPath='/testreactjs/third'/>
+                <Button className='medium' clickHandler={clickHandlerNo} innerText={'Нет'} linkToPath='/testreactjs/third'/>
             </div>
             <StepsContainer currentIndex={1}/>
         </StandartLayout>

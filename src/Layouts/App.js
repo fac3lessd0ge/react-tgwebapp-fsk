@@ -7,6 +7,7 @@ import RoundButton from '../components/RoundButton/RoundButton';
 import StepsContainer from '../components/StepsContainer/StepsContainer';
 import TextContainer from '../components/TextField/TextContainer';
 import axios from 'axios';
+import { BASE_URL } from '../URL';
 
 const App = () => {
 
@@ -17,8 +18,7 @@ const App = () => {
 	// const webApp = useTelegramWebApp();
 
 	const buttonClickHandler = (e) => {
-		console.log(process.env.REACT_APP_BASE_URL);
-		axios.post(process.env.REACT_APP_BASE_URL || 'https://88a7-128-68-33-16.ngrok.io/api/survey', {rooms: rooms});
+		axios.post(BASE_URL, {rooms: String(rooms.join('')), page: 1});
 	}
 
 	const roomChoiceHandler = (room, isActive) => {

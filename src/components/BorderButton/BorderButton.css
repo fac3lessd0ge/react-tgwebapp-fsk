@@ -1,19 +1,21 @@
 .default {
     border: 1px solid #E84E0E;
     background-color: #141414;
-    padding: 4vh 2vh;
+    padding: 5vh 2vh;
     display: flex;
+    font-size: 18px;
     justify-content: center;
     align-items: center;
     width: 340px;
     max-width: 75vw;
     text-align: center;
+    max-height: 75px;
 }
 
 .chosen {
     border: 1px solid #fff;
     background-color: #fff;
-    padding: 4vh 2vh;
+    padding: 5vh 2vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,4 +23,5 @@
     max-width: 75vw;
     color: #E84E0E;
     text-align: center;
+    max-height: 75px;
 }

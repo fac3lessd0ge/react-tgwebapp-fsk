@@ -9,7 +9,7 @@
         height: 3rem;
     }
 
-    .btn-container > button > span {
+    .btn-container > .wrp > button > span {
         font-size: 0.8rem !important;
     }
 

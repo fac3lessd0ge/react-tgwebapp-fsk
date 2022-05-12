@@ -5,6 +5,11 @@ import Button from '../components/Button/Button';
 import './SecondLayout.css'
 import BorderButton from '../components/BorderButton/BorderButton';
 import StepsContainer from '../components/StepsContainer/StepsContainer';
+
+import axios from 'axios';
+import { BASE_URL } from '../URL';
+
+
 import './FourthLayout.css';
 
 
@@ -16,19 +21,52 @@ const style = {
 }
 
 const FourthLayout = () => {
+	const [current, setCurrent] = React.useState(1);
+
+
+	const strings = [
+		'ОБЪЕКТ ДОЛЖЕН БЫТЬ СДАН',
+		'ОБЪЕКТ СДАЁТСЯ В ЭТОМ ГОДУ',
+		'ОБЪЕКТ СДАЁТСЯ В СЛЕДУЮЩЕМ ГОДУ',
+		'ОБЪЕКТ СДАЁТСЯ В ТЕЧЕНИЕ НЕСКОЛЬКИХ ЛЕТ',
+		'СРОК СДАЧИ НЕ ВАЖЕН'
+	]
+
+	const clickHandlerVariant = (num) => {
+		setCurrent(num)
+	}
+
+	const variants = ['already', 'current_year', 'next_year', 'some_years', 'important']
+
+	const clickHandlerPost = (e) => {
+		axios.post(BASE_URL, {delivery_date: variants[current], page: 4});
+	}
+
+
     return (
 		<StandartLayout>
 			<TextContainer>
 				{'вам важно, чтобы объект был уже сдан'.toUpperCase()}
 			</TextContainer>
 			<div className='btn-container' style={style}>
-				<BorderButton className={'default'}>ОБЪЕКТ ДОЛЖЕН БЫТЬ СДАН</BorderButton>
-				<BorderButton className={'default'}>ОБЪЕКТ СДАЁТСЯ В ЭТОМ ГОДУ</BorderButton>
-				<BorderButton className={'default'}>ОБЪЕКТ СДАЁТСЯ В СЛЕДУЮЩЕМ ГОДУ</BorderButton>
-				<BorderButton className={'default'}>ОБЪЕКТ СДАЁТСЯ В ТЕЧЕНИЕ НЕСКОЛЬКИХ ЛЕТ</BorderButton>
-				<BorderButton className={'default'}>СРОК СДАЧИ НЕ ВАЖЕН</BorderButton>
+				{strings.map((element, index) => {
+					return (
+					<div 
+						key={index} 
+						className='wrp'
+						onClick={(e) => {clickHandlerVariant(index)}}
+					>
+						<BorderButton
+						key={index}
+						className={current === index ? 'default chosen' : 'default'}
+					>
+						{element}
+					</BorderButton>
+					</div>
+					
+				)})}
 			</div>
-            <Button innerText={'ВЫБРАТЬ'} linkToPath="/testreactjs/fifth" />
+            <Button clickHandler={clickHandlerPost} innerText={'ВЫБРАТЬ'} linkToPath="/testreactjs/fifth" />
 			<StepsContainer currentIndex={3}/>
 		</StandartLayout>
 	);

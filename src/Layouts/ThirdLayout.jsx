@@ -4,6 +4,10 @@ import StandartLayout from './StandartLayout';
 import Button from '../components/Button/Button';
 import { TwoThumbInputRange } from 'react-two-thumb-input-range';
 import StepsContainer from '../components/StepsContainer/StepsContainer';
+
+import axios from 'axios';
+import { BASE_URL } from '../URL';
+
 import thumbs from '../thumbs.svg'
 import './ThirdLayout.css'
 
@@ -43,7 +47,13 @@ const ThirdLayout = () => {
     const [value, setValue] = React.useState([7, 20])
 
     const onValueChange = (values) => {
-        setValue(values);
+        if (values[0] < values[1]) {
+            setValue(values);
+        } 
+    }
+
+    const clickHandler = (e) => {
+        axios.post(BASE_URL, {price_from: value[0], price_to: value[1], page: 3});
     }
 
     return (
@@ -71,7 +81,7 @@ const ThirdLayout = () => {
                 labelTextStyle={labelTextStyle}
             />
             <br/>
-            <Button innerText={'Подтвердить'} linkToPath='/testreactjs/fourth'/>
+            <Button clickHandler={clickHandler} innerText={'Подтвердить'} linkToPath='/testreactjs/fourth'/>
             <StepsContainer currentIndex={2}/>
         </StandartLayout>
     );

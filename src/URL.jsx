@@ -1,0 +1,1 @@
+export const BASE_URL = 'https://88a7-128-68-33-16.ngrok.io/api/survey';
