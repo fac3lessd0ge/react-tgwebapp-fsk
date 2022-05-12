@@ -25,7 +25,7 @@ const FourthLayout = () => {
 
 	const webApp = useTelegramWebApp();
 
-	const [current, setCurrent] = React.useState(1);
+	const [current, setCurrent] = React.useState(null);
 
 	const strings = [
 		'ОБЪЕКТ ДОЛЖЕН БЫТЬ СДАН',
