@@ -34,7 +34,6 @@ const SecondLayout = () => {
 
     return (
         <StandartLayout>
-            {initData}
             <TextContainer>
                 {'Будет ли использовано ипотечное финансирование?'.toUpperCase()}
             </TextContainer>

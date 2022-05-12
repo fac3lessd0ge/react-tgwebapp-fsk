@@ -62,7 +62,6 @@ const ThirdLayout = () => {
 
     return (
         <StandartLayout>
-            {initData}
             <TextContainer style={{marginBottom: '6vh'}}>
                 {'В каком ценовом диапазоне вы ищете квартиру?'.toUpperCase()}
             </TextContainer>

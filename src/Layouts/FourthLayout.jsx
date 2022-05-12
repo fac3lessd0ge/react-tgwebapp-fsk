@@ -48,7 +48,6 @@ const FourthLayout = () => {
 
     return (
 		<StandartLayout>
-			{initData}
 			<TextContainer>
 				{'вам важно, чтобы объект был уже сдан'.toUpperCase()}
 			</TextContainer>

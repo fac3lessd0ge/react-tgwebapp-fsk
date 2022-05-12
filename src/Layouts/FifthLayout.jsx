@@ -42,7 +42,6 @@ const FifthLayout = () => {
 
     return (
 		<StandartLayout>
-            {initData}
 			<TextContainer className="adaptive">
 				{'На основе ваших ответов мы подобрали несколько вариантов подходящих квартир.'.toUpperCase()}
 			</TextContainer>
