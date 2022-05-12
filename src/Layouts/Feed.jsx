@@ -12,14 +12,13 @@ const Feed = () => {
 
     const { initData } = React.useContext(InitDataContext);
 
-    React.useEffect(() => {
+    React.useEffect( () => {
         axios.post(BASE_URL_FEED,{
             _auth: initData
-        }).then((res) => {
-            const dat = res.data;
-            setResponse(dat);
-        })
-    }, [initData])
+        }).then((res) => 
+            setResponse(res)
+        )
+    }, [])
 
 
     return (
