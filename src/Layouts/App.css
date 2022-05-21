@@ -18,14 +18,7 @@ main {
   position: relative;
 }
 
-.grid-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  gap: 2.5rem;
-  margin-top: 10vh;
-  margin-bottom: 15vh;
-}
+
 
 
 @media (max-height: 450px) {

@@ -1,11 +1,14 @@
 .round-button {
     display: grid;
     place-items: center;
-    width: 4rem;
-    height: 4rem;
-    background-color: #3F3F40;
+    width: 50px;
+    height: 50px;
+    background-color: #1C1C1E;
+    border: 2px solid #3f3f40;
     border-radius: 50%;
     font-size: 2.1rem;
+    color: #fff;
+    margin: 0 40px 35px 40px; 
 }
 
 .round-button:hover {

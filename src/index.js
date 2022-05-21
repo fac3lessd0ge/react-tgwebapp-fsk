@@ -15,6 +15,7 @@ import './adaptive.css'
 import Feed from './Layouts/Feed';
 import Redirect from './Redirect';
 import InitDataProvider from './InitDataProvider';
+import Quiz from './Layouts/Quiz';
 
 async function validateHash(hash) {
 	const response = {
@@ -34,6 +35,7 @@ root.render(
 				<Routes>
 					<Route path="/testreactjs" element={<Redirect />} />
 					<Route path="/testreactjs/first" element={<App />} />
+					<Route path='/testreactjs/quiz' element={<Quiz />} />
 					<Route
 						path="/testreactjs/second"
 						element={<SecondLayout />}

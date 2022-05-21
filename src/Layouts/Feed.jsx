@@ -4,6 +4,7 @@ import { InitDataContext } from '../InitDataProvider';
 
 import axios from 'axios';
 import { BASE_URL_FEED } from '../URL';
+import SearchFail from './SearchFail';
 
 
 
@@ -12,18 +13,33 @@ const Feed = () => {
 
     const { initData } = React.useContext(InitDataContext);
 
-    React.useEffect(() => {
-        axios.post(BASE_URL_FEED,{
-            _auth: initData
-        }).then((res) => 
-            setResponse(res.data.apartments)
-        )
-    }, [initData])
+    // React.useEffect(() => {
+
+    //     try {
+    //         axios.post(BASE_URL_FEED,{
+    //             _auth: initData
+    //         }).then((res) => {
+    //             console.log(res);
+    //             if (res.status === 200) {
+    //                 setResponse(res.data.apartments)
+    //             }
+    //             else {
+    //                 setResponse(null);
+    //             }
+    //         }) 
+    //     } catch (error) {
+    //         console.log('hey!');
+    //         setResponse(null);
+    //     }
+
+        
+    // }, [initData])
 
 
     return (
+        <>
         <div>
-            {response.map((element, index) => {
+            {/* {response && response.map((element, index) => {
                 console.log(element);
 
                 return <HousingCard 
@@ -37,7 +53,11 @@ const Feed = () => {
                     startingPrice={element[5]}
                 />
             })}
+
+            {!response && <SearchFail />} */}
+            <SearchFail />
         </div>
+        </>
     );
 }
  
