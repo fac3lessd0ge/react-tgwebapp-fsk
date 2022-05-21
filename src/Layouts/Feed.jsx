@@ -1,17 +1,17 @@
 import React from 'react';
-import HousingCard from '../components/HousingCard/HousingCard';
-import { InitDataContext } from '../InitDataProvider';
+// import HousingCard from '../components/HousingCard/HousingCard';
+// import { InitDataContext } from '../InitDataProvider';
 
-import axios from 'axios';
-import { BASE_URL_FEED } from '../URL';
+// import axios from 'axios';
+// import { BASE_URL_FEED } from '../URL';
 import SearchFail from './SearchFail';
 
 
 
 const Feed = () => {
-    const [response, setResponse] = React.useState([])
+    // const [response, setResponse] = React.useState([])
 
-    const { initData } = React.useContext(InitDataContext);
+    // const { initData } = React.useContext(InitDataContext);
 
     // React.useEffect(() => {
 
