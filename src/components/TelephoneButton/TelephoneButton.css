@@ -1,0 +1,12 @@
+.telephone-button {
+    display: grid;
+    place-items: center;
+    position: sticky;
+
+    width: 65px;
+    height: 65px;
+    position: sticky;
+    background-color: #E84E0E;
+    border-radius: 50%;
+
+}

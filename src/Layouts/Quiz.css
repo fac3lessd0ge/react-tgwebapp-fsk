@@ -31,12 +31,16 @@ span.white {
     
 }
 
+ul::-webkit-scrollbar {
+    background-color: #1C1C1E;
+}
+
 li > span {
     display: none !important;
 }
 
 li > p {
-    font-size: 20px !important;
+    font-size: 19px !important;
 }
 
 li {

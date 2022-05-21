@@ -12,6 +12,12 @@ body {
   letter-spacing: 0.1em;
 }
 
-html, body, #root {
+a {
+  text-decoration: none;
+  padding: 0px auto;
+  color: #fff;
+}
+
+html {
   height: 100%;
 }

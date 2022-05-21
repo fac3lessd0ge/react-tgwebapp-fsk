@@ -92,7 +92,7 @@ const Quiz = () => {
 					paddingTop: '35px'
 				}}
 			>
-				ЗАГОЛОВОК
+				ВАШИ ПРЕДПОЧТЕНИЯ
 			</TextContainer>
 			<div
 				style={{height:'180px', marginTop: '40px', gap: '55px' }}
