@@ -7,7 +7,7 @@ import WheelPicker from 'react-simple-wheel-picker';
 
 import './Quiz.css'
 
-import thumbs from '../thumbs.svg'
+import thumbs from '../Assets/thumbs.svg'
 
 const thumbStyle = {
     width: '2rem',

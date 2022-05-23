@@ -3,7 +3,7 @@ import TextContainer from '../components/TextField/TextContainer';
 import BorderButton from '../components/BorderButton/BorderButton';
 import TelephoneButton from '../components/TelephoneButton/TelephoneButton';
 
-import { ReactComponent as Back } from '../Arrow_1.svg';
+import { ReactComponent as Back } from '../Assets/Arrow_1.svg';
 import { Link } from 'react-router-dom';
 
 const SearchFail = () => {

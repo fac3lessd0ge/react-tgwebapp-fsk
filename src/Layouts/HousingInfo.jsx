@@ -1,15 +1,15 @@
 import React from 'react';
 import Button from '../components/Button/Button';
 import PhotoCarousel from '../components/PhotoCarousel/PhotoCarousel';
-import { ReactComponent as Location } from '../Location.svg';
-import { ReactComponent as Chel } from '../stand4el.svg';
-import { ReactComponent as SrokSdachi } from '../SrokSda4i.svg';
-import { ReactComponent as Calendar } from '../Calendar.svg';
-import { ReactComponent as Panelki } from '../Panelki.svg';
-import { ReactComponent as SmallerPanelki } from '../SmallerPanelki.svg';
-import { ReactComponent as Otdelka } from '../Otdelka.svg';
-import { ReactComponent as Kvartirka } from '../Kvartirka.svg';
-import { ReactComponent as Back } from '../Arrow_1.svg';
+import { ReactComponent as Location } from '../Assets/Location.svg';
+import { ReactComponent as Chel } from '../Assets/stand4el.svg';
+import { ReactComponent as SrokSdachi } from '../Assets/SrokSda4i.svg';
+import { ReactComponent as Calendar } from '../Assets/Calendar.svg';
+import { ReactComponent as Panelki } from '../Assets/Panelki.svg';
+import { ReactComponent as SmallerPanelki } from '../Assets/SmallerPanelki.svg';
+import { ReactComponent as Otdelka } from '../Assets/Otdelka.svg';
+import { ReactComponent as Kvartirka } from '../Assets/Kvartirka.svg';
+import { ReactComponent as Back } from '../Assets/Arrow_1.svg';
 
 
 import './HousingInfo.css';
