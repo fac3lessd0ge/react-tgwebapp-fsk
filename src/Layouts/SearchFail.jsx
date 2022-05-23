@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 const SearchFail = () => {
 
     return (
-		<div style={{ position: 'relative' }}>
+		<div style={{ position: 'relative', backgroundColor: '#1c1c1e' }}>
 			<div
 				style={{
 					display: 'grid',
