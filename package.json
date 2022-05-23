@@ -1,7 +1,7 @@
 {
   "name": "testreactjs",
   "version": "0.1.0",
-  "homepage": "https://fac3lessd0ge.github.io/testreactjs",
+  "homepage": "https://fac3lessd0ge.github.io/react-tgwebapp-fsk",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.9.0",

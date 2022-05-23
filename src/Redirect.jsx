@@ -33,7 +33,7 @@ const Redirect = () => {
     return (
         <>
             {/* {(currentPage !== null) && <Navigate replace to={linksTo[currentPage + 1]}/>} */}
-            <Navigate replace to={'/testreactjs/quiz'}/>
+            <Navigate replace to={'/react-tgwebapp-fsk/quiz'}/>
         </>  
     );
 }

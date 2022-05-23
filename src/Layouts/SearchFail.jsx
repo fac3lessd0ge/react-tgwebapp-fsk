@@ -60,7 +60,7 @@ const SearchFail = () => {
 					>
 						<Link
 							style={{ display: 'border-box', width: '95%' }}
-							to={'/testreactjs/quiz'}
+							to={'/react-tgwebapp-fsk/quiz'}
 						>
 							{<Back />} НАЗАД К ПОДБОРУ КВАРТИР
 						</Link>

@@ -95,7 +95,7 @@ const HousingInfo = () => {
 							margin: '20px auto'
 						}}
 						innerText={'ОЦЕНИТЬ СВОЮ КВАРТИРУ'}
-						linkToPath={''}
+						linkToPath={'/react-tgwebapp-fsk/recalltrade'}
 					/>
 				</div>
 			</div>
@@ -236,7 +236,7 @@ const HousingInfo = () => {
 						margin: '20px auto'
 					}}
 					innerText={'ПОЛУЧИТЬ СПИСОК КВАРТИР'}
-					linkToPath={''}
+					linkToPath={'/react-tgwebapp-fsk/recallgethousing'}
 				/>
 			</div>
             
@@ -250,7 +250,7 @@ const HousingInfo = () => {
                         border: '1px solid #fff'
 					}}
 					innerText={<><Back /> Вернуться к подбору квартир</>}
-					linkToPath={'/testreactjs/quiz'}
+					linkToPath={'/react-tgwebapp-fsk/quiz'}
 				/>
             </div>
 			

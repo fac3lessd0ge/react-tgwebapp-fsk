@@ -179,7 +179,7 @@ const Quiz = () => {
 					/>
 				</div>
 			</div>
-			<Button innerText={'Подобрать'} linkToPath="/testreactjs/feed" />
+			<Button innerText={'Подобрать'} linkToPath="/react-tgwebapp-fsk/feed" />
 		</div>
 	);
 }

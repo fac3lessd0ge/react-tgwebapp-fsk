@@ -35,12 +35,12 @@ root.render(
 		<InitDataProvider initialValue={initData}>
 			<BrowserRouter>
 				<Routes>
-					<Route path="/testreactjs" element={<Redirect />} />
-					<Route path='/testreactjs/quiz' element={<Quiz />} />
-					<Route path="/testreactjs/feed" element={<Feed />} />
-					<Route path="/testreactjs/housing" element={<HousingInfo />} />
-					<Route path="/testreactjs/recalltrade" element={<Recall phrase='вам перезвонит мэнеджер Trade-in сделок' />} />
-					<Route path="/testreactjs/recallgethousing" element={<Recall phrase='получите список доступных квартир'/>} />
+					<Route path="/react-tgwebapp-fsk" element={<Redirect />} />
+					<Route path='/react-tgwebapp-fsk/quiz' element={<Quiz />} />
+					<Route path="/react-tgwebapp-fsk/feed" element={<Feed />} />
+					<Route path="/react-tgwebapp-fsk/housing" element={<HousingInfo />} />
+					<Route path="/react-tgwebapp-fsk/recalltrade" element={<Recall phrase='вам перезвонит мэнеджер Trade-in сделок' />} />
+					<Route path="/react-tgwebapp-fsk/recallgethousing" element={<Recall phrase='получите список доступных квартир'/>} />
 					{/* <Route path="/testreactjs/first" element={<App />} /> */}
 					{/* <Route
 						path="/testreactjs/second"
