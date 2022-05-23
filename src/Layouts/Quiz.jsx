@@ -104,7 +104,7 @@ const Quiz = () => {
 						color: '#727272',
 						fontWeight: '300',
 						letterSpacing: '0',
-						margin: '5% 0% 5% 0%'
+						margin: '15px 0% 15px 0%'
 					}}
 				>
 					Стоимость недвижимости:
@@ -134,7 +134,7 @@ const Quiz = () => {
 						fontSize: '24px',
 						color: '#727272',
 						fontWeight: '300',
-						marginTop: '5%',
+						marginTop: '10px',
 						letterSpacing: '0'
 					}}
 				>

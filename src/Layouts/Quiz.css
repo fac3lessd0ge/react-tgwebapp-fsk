@@ -20,6 +20,20 @@ span.white {
     font-size: 18px;
 }
 
+output {
+    width: 6% !important;
+}
+
+@media screen and (max-width: 1050px) {
+    output {
+        width: 20% !important;
+    }
+}
+
+small::after {
+    content:' (мл.)';
+}
+
 .quiz-element {
     width: 95%;
     min-height: 200px;

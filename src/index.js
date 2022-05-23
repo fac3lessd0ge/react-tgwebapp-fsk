@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './Layouts/App';
 import { TelegramWebApp } from 'react-telegram-webapp';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 import './fonts/FuturaFuturis/style.css';
-import SecondLayout from './Layouts/SecondLayout';
-import ThirdLayout from './Layouts/ThirdLayout';
-import FourthLayout from './Layouts/FourthLayout';
-import FifthLayout from './Layouts/FifthLayout';
+// import App from './Layouts/App';
+// import SecondLayout from './Layouts/SecondLayout';
+// import ThirdLayout from './Layouts/ThirdLayout';
+// import FourthLayout from './Layouts/FourthLayout';
+// import FifthLayout from './Layouts/FifthLayout';
 
 
 import './adaptive.css'
