@@ -1,0 +1,13 @@
+.control-dots {
+    display: flex;
+    justify-content: center;
+    background-color: #000;
+    height: 25%;
+    align-items: center;
+    bottom: -60px !important; 
+    position: absolute;
+}
+
+.carousel.carousel-slider {
+    overflow:visible !important;
+}
