@@ -67,7 +67,7 @@ const SearchFail = () => {
 					</BorderButton>
 				</div>
 			</div>
-			<TelephoneButton />
+			{/* <TelephoneButton /> */}
 		</div>
 	);
 }
