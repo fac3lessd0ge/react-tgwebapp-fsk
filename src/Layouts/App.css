@@ -21,7 +21,7 @@ main {
 
 
 
-@media (max-height: 450px) {
+/* @media (max-height: 450px) {
     .content {
       padding-top: 0;
     }
@@ -37,4 +37,4 @@ main {
   .grid-wrapper {
     margin-bottom: 5vh;
   }
-}
+} */

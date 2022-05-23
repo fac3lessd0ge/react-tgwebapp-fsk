@@ -16,6 +16,7 @@ import Feed from './Layouts/Feed';
 import Redirect from './Redirect';
 import InitDataProvider from './InitDataProvider';
 import Quiz from './Layouts/Quiz';
+import PhonePage from './PhonePage';
 
 async function validateHash(hash) {
 	const response = {
@@ -34,9 +35,11 @@ root.render(
 			<BrowserRouter>
 				<Routes>
 					<Route path="/testreactjs" element={<Redirect />} />
-					<Route path="/testreactjs/first" element={<App />} />
 					<Route path='/testreactjs/quiz' element={<Quiz />} />
-					<Route
+					<Route path="/testreactjs/feed" element={<Feed />} />
+					<Route path="/testreactjs/phone" element={<PhonePage />} />
+					{/* <Route path="/testreactjs/first" element={<App />} /> */}
+					{/* <Route
 						path="/testreactjs/second"
 						element={<SecondLayout />}
 					/>
@@ -51,8 +54,7 @@ root.render(
 					<Route
 						path="/testreactjs/fifth"
 						element={<FifthLayout />}
-					/>
-					<Route path="/testreactjs/feed" element={<Feed />} />
+					/> */}
 				</Routes>
 			</BrowserRouter>
 		</InitDataProvider>

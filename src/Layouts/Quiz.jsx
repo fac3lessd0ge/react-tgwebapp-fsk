@@ -89,13 +89,13 @@ const Quiz = () => {
 					color: '#fff',
 					fontSize: '30px',
 					margin: '0',
-					paddingTop: '35px'
+					paddingTop: '20px'
 				}}
 			>
 				ВАШИ ПРЕДПОЧТЕНИЯ
 			</TextContainer>
 			<div
-				style={{height:'180px', marginTop: '40px', gap: '55px' }}
+				style={{marginTop: '40px' }}
 				className="quiz-element quiz-price-wrapper"
 			>
 				<TextContainer
@@ -103,8 +103,8 @@ const Quiz = () => {
 						fontSize: '24px',
 						color: '#727272',
 						fontWeight: '300',
-						marginTop: '10%',
-						letterSpacing: '0'
+						letterSpacing: '0',
+						margin: '5% 0% 5% 0%'
 					}}
 				>
 					Стоимость недвижимости:

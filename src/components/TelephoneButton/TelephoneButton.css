@@ -3,10 +3,28 @@
     place-items: center;
     position: sticky;
 
-    width: 65px;
-    height: 65px;
-    position: sticky;
+    width: 75px;
+    height: 75px;
+    position: fixed;
+    top: 86vh;
+    left: 75vw;
     background-color: #E84E0E;
     border-radius: 50%;
 
+}
+
+@media screen and (max-width: 300px) {
+    .telephone-button {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .telephone-button {
+        width: 100px;
+        height: 100px;
+        top: 80vh;
+        left: 80vw;
+    }
 }
