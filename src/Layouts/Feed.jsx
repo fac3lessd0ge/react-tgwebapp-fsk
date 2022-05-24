@@ -25,7 +25,6 @@ const Feed = () => {
              axios.post(BASE_URL_FEED,{
                 _auth: initData
             }).then((res) => {
-                console.log(res);
                 // if (res.status === 200) {
                     setResp(res.data)
                     setResponse(res.data.apartments)
@@ -35,9 +34,10 @@ const Feed = () => {
                 //     setLoading(false);
                 //     setResponse(null);
                 // }
-            }).catch(err => {setLoading(false); setResponse(null)})
+            }).catch(err => {setLoading(false); setResponse(null); setResp('Ошибка!!! 1')})
         } catch (error) {
             console.log('hey!');
+            setResp('ошибка!!! 2')
             setResponse(null);
             setLoading(false);
         }
