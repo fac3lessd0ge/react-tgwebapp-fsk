@@ -4,10 +4,13 @@ import TextContainer from '../components/TextField/TextContainer';
 import { TwoThumbInputRange } from 'react-two-thumb-input-range';
 import RoundButton from '../components/RoundButton/RoundButton';
 import WheelPicker from 'react-simple-wheel-picker';
+import { InitDataContext } from '../InitDataProvider';
+import { BASE_URL_SURVEY } from '../URL';
 
 import './Quiz.css'
 
 import thumbs from '../Assets/thumbs.svg'
+import axios from 'axios';
 
 const thumbStyle = {
     width: '2rem',
@@ -35,27 +38,34 @@ const inputStyle = {
 const data = [
     {
         id: '1',
-        value: 'Не имеет значения'
+        value: 'Не имеет значения',
+		date: '3021-01-01'
     },
     {
         id: '2',
-        value: '2 квартал 2022'
+        value: '2 квартал 2022',
+		date: '2022-04-01'
     },
     {
         id: '3',
-        value: '3 квартал 2022'
+        value: '3 квартал 2022',
+		date: '2022-07-01'
     },
     {
         id: '4',
-        value: '4 квартал 2022'
+        value: '4 квартал 2022',
+		date: '2022-10-01'
     },
     {
         id: '5',
-        value: '1 квартал 2023'
+        value: '1 квартал 2023',
+		date: '2023-01-01'
     }
 ];
 
 const Quiz = () => {
+
+	const { initData } = React.useContext(InitDataContext);
 
     const [value, setValue] = React.useState([7, 20])
 
@@ -80,6 +90,26 @@ const Quiz = () => {
 		else {
 			setRooms(() => rooms.filter((element) => element !== room))
 		}
+	}
+
+	const buttonClickHandler = () => {
+		const postBody = {
+			_auth: initData,
+			rooms: String(rooms.join('')),
+			price_from: value[0],
+			price_to: value[1],
+			delivery_date: target.date //в каком виде передаётся дата?
+		}
+
+
+		axios.post(BASE_URL_SURVEY, postBody)
+			.then(res => {
+				console.log('Отправил!');
+				/* global Telegram */
+				Telegram.WebApp.close();
+			})
+			.catch(err => console.log(postBody));
+		
 	}
 
     return (
@@ -179,7 +209,7 @@ const Quiz = () => {
 					/>
 				</div>
 			</div>
-			<Button innerText={'Подобрать'} linkToPath="/react-tgwebapp-fsk/feed" />
+			<Button clickHandler={buttonClickHandler} innerText={'Подобрать'} linkToPath="/react-tgwebapp-fsk/feed" />
 		</div>
 	);
 }
