@@ -304,7 +304,7 @@ const HousingInfo = () => {
 									<Back /> Вернуться к подбору квартир
 								</>
 							}
-							linkToPath={'/react-tgwebapp-fsk/quiz'}
+							linkToPath={'/react-tgwebapp-fsk/feed'}
 						/>
 					</div>
 				</div>

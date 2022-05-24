@@ -8,6 +8,10 @@
     position: absolute;
 }
 
+.carousel-image {
+    height: 35vh;
+}
+
 .carousel.carousel-slider {
     overflow:visible !important;
 }

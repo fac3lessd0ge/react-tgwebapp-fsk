@@ -83,7 +83,7 @@ const PhotoCarousel = ({ imgArr }) => {
             >
                 {imgArr.map(elem => 
                     <div>
-                        <img src={elem} alt='Housing'/>
+                        <img className='carousel-image' src={elem} alt='Housing'/>
                     </div>    
                 )}
             </Carousel>
