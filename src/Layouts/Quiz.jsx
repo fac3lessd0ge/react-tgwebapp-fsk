@@ -115,15 +115,14 @@ const Quiz = () => {
 		axios.post(BASE_URL_SURVEY, postBody)
 			.then(res => {
 				console.log('Отправил!');
-				/* global Telegram */
-				Telegram.WebApp.close();
-			})
-			.catch(err => console.log(postBody));
 
-		axios.post(BASE_URL_SURVEY_END, {
-			_auth: initData
-		})
-		
+				axios.post(BASE_URL_SURVEY_END, {
+					_auth: initData
+				}).then(res => Telegram.WebApp.close())
+				/* global Telegram */
+				
+			})
+			.catch(err => console.log(postBody));	
 	}
 
     return (

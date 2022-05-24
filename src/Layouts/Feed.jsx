@@ -60,8 +60,11 @@ const Feed = () => {
                 />
                 </Link> 
             )}
+
+            {response && <div style={{color: 'white'}}>JSON.stringify(response)</div>}
+
             {!response && loading && <>Загрузка...</>}
-            {!response && !loading && <SearchFail />}
+            {response.length === 0 && !loading && <SearchFail />}
         </div>
         </>
     );
