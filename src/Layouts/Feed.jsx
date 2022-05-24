@@ -13,6 +13,26 @@ import { Link } from 'react-router-dom';
 
 const Feed = () => {
 
+    const cropNumberMillions = (x) => {
+        let newX = x.toString();
+        switch (newX.length) {
+          case 7:
+            newX = newX.substring(0, 2).split('');
+            newX.splice(1, 0, ',');
+            return newX.join('')
+          case 8:
+            newX = newX.substring(0, 3).split('');
+            newX.splice(2, 0, ',');
+            return newX.join('')
+          case 9:
+            newX = newX.substring(0, 4).split('');
+            newX.splice(3, 0, ',');
+            return newX.join('')
+          default:
+            return x
+          }
+      };
+
     const [loading, setLoading] = React.useState(true);
 
      const [response, setResponse] = React.useState(null)
@@ -52,7 +72,7 @@ const Feed = () => {
                     title={element[3]}
                     metro={element[5]}
                     toMetroTime={`${element[8]} мин.`}
-                    startingPrice={element[1]}
+                    startingPrice={cropNumberMillions(element[1])}
                     />
                 </Link> 
             )}
