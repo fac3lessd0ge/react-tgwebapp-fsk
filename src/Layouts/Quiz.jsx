@@ -5,7 +5,7 @@ import { TwoThumbInputRange } from 'react-two-thumb-input-range';
 import RoundButton from '../components/RoundButton/RoundButton';
 import WheelPicker from 'react-simple-wheel-picker';
 import { InitDataContext } from '../InitDataProvider';
-import { BASE_URL_SURVEY } from '../URL';
+import { BASE_URL_SURVEY, BASE_URL_SURVEY_END } from '../URL';
 
 import './Quiz.css'
 
@@ -119,6 +119,10 @@ const Quiz = () => {
 				Telegram.WebApp.close();
 			})
 			.catch(err => console.log(postBody));
+
+		axios.post(BASE_URL_SURVEY_END, {
+			_auth: initData
+		})
 		
 	}
 
