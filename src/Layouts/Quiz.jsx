@@ -75,10 +75,20 @@ const Quiz = () => {
         } 
     }
 
-	const [target, setTarget] = React.useState(data[0])
+	const [target, setTarget] = React.useState(0)
 
 	const handleOnChange = target => {
-        setTarget(target);
+		console.log(target);
+
+		const targetMap = {
+			'Не имеет значения': 0,
+			'2 квартал 2022': 1,
+			'3 квартал 2022': 2,
+			'4 квартал 2022': 3,
+			'1 квартал 2023': 4
+		}
+
+        setTarget(targetMap[target.value]);
     };
 
 	const [rooms, setRooms] = React.useState([])
@@ -98,7 +108,7 @@ const Quiz = () => {
 			rooms: String(rooms.join('')),
 			price_from: value[0],
 			price_to: value[1],
-			delivery_date: target.date //в каком виде передаётся дата?
+			delivery_date: data[target].date //в каком виде передаётся дата?
 		}
 
 
@@ -191,7 +201,7 @@ const Quiz = () => {
 					fontWeight: '300',
 					marginTop: '5%',
 					letterSpacing: '0'
-				}}>Заселение до: <span className='white'>{target.value}</span></TextContainer>
+				}}>Заселение до: <span className='white'>{data[target].value}</span></TextContainer>
 				<div style={{height: '100px', fontSize: '20px', margin: 'auto'}}>
 					<WheelPicker
 						data={data}

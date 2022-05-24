@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { TelegramWebApp } from 'react-telegram-webapp';
-import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './fonts/FuturaFuturis/style.css';
 // import App from './Layouts/App';
 // import SecondLayout from './Layouts/SecondLayout';
@@ -38,7 +38,8 @@ root.render(
 					<Route path="/react-tgwebapp-fsk" element={<Redirect />} />
 					<Route path='/react-tgwebapp-fsk/quiz' element={<Quiz />} />
 					<Route path="/react-tgwebapp-fsk/feed" element={<Feed />} />
-					<Route path="/react-tgwebapp-fsk/housing/:id" children={<HousingInfo />} />
+					<Route path="/react-tgwebapp-fsk/housing/:id" element={<HousingInfo />} />
+					
 					<Route path="/react-tgwebapp-fsk/recalltrade" element={<Recall phrase='вам перезвонит мэнеджер Trade-in сделок' />} />
 					<Route path="/react-tgwebapp-fsk/recallgethousing" element={<Recall phrase='получите список доступных квартир'/>} />
 					{/* <Route path="/testreactjs/first" element={<App />} /> */}
