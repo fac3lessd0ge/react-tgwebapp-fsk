@@ -46,7 +46,8 @@ const Feed = () => {
     return (
         <>
         <div>
-            {response && response.map((element, index) =>  
+            {!response && loading && <>Загрузка...</>}
+            {response?.length && response.map((element, index) =>  
                 <Link to={`/react-tgwebapp-fsk/housing/${element[0]}`}>
                     <HousingCard 
                     key={index}
@@ -61,10 +62,9 @@ const Feed = () => {
                 </Link> 
             )}
 
-            {response && <div style={{color: 'white'}}>JSON.stringify(response)</div>}
+            {response && <div style={{color: 'white'}}>{JSON.stringify(response)}</div>}
 
-            {!response && loading && <>Загрузка...</>}
-            {response.length === 0 && !loading && <SearchFail />}
+            {response?.length === 0 && !loading && <SearchFail />}
         </div>
         </>
     );

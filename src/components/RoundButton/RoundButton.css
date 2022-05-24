@@ -10,6 +10,10 @@
     color: #fff;
 }
 
+.round-button > span {
+    letter-spacing: 0;
+}
+
 .round-button:hover {
     cursor: pointer;
 }

@@ -9,6 +9,8 @@ import { ReactComponent as SmallerPanelki } from '../Assets/SmallerPanelki.svg';
 import { ReactComponent as Kvartirka } from '../Assets/Kvartirka.svg';
 import { ReactComponent as Back } from '../Assets/Arrow_1.svg';
 
+import { useParams } from 'react-router';
+
 // import { ReactComponent as Chel } from '../Assets/stand4el.svg';
 // import { ReactComponent as Otdelka } from '../Assets/Otdelka.svg';
 
@@ -21,7 +23,7 @@ import { InitDataContext } from '../InitDataProvider';
 
 
 const HousingInfo = () => {
-	let { id } = React.useParams();
+	let { id } = useParams();
 
 	const { initData } = React.useContext(InitDataContext);
 
