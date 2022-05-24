@@ -24,14 +24,14 @@ const Feed = () => {
                 _auth: initData
             }).then((res) => {
                 console.log(res);
-                if (res.status === 200) {
+                // if (res.status === 200) {
                     setResponse(res.data.apartments)
                     setLoading(false);
-                }
-                else {
-                    setLoading(false);
-                    setResponse(null);
-                }
+                // }
+                // else {
+                //     setLoading(false);
+                //     setResponse(null);
+                // }
             }).catch(err => {setLoading(false); setResponse(null)})
         } catch (error) {
             console.log('hey!');
