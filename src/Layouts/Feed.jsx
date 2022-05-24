@@ -2,6 +2,8 @@ import React from 'react';
 import HousingCard from '../components/HousingCard/HousingCard';
 import { InitDataContext } from '../InitDataProvider';
 
+import url from '../Assets/fakeAPIImage1.png';
+
 import axios from 'axios';
 import { BASE_URL_FEED } from '../URL';
 import SearchFail from './SearchFail';
@@ -51,7 +53,7 @@ const Feed = () => {
         <div>
             {JSON.stringify(resp)}
             {!response && loading && <>Загрузка...</>}
-            {response?.length && response.map((element, index) =>  
+            {/* {response?.length && response.map((element, index) =>  
                 <Link to={`/react-tgwebapp-fsk/housing/${element[0]}`}>
                     <HousingCard 
                     key={index}
@@ -62,9 +64,9 @@ const Feed = () => {
                     metro={element[3]}
                     toMetroTime={'не пришло из бд'}
                     startingPrice={element[5]}
-                />
+                    />
                 </Link> 
-            )}
+            )} */}
 
             {response && <div style={{color: 'white'}}>{JSON.stringify(response)}</div>}
 
