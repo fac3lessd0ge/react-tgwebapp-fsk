@@ -39,14 +39,15 @@ const HousingInfo = () => {
 			})
 			.then((res) => {
 				setInfo(res.data.desc);
+			})
+			.finally(() => {
 				setLoading(false);
 			});
 	}, [id, initData]);
 
 	return (
-
 		<>
-			{!loading && info && (
+			{!loading && info && info.length && (
 				<div>
 					<PhotoCarousel imgArr={info[3].slice(0, 5)}/>
 
