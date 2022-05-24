@@ -1,5 +1,5 @@
 import React from 'react';
-import { ReactComponent as Stand } from '../../stand4el.svg';
+import { ReactComponent as Stand } from '../../Assets/stand4el.svg';
 
 import './HousingCard.css'
 

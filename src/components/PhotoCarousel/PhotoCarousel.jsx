@@ -44,7 +44,7 @@ const carouselProps = {
     autoPlay: true
 }
 
-const PhotoCarousel = () => {
+const PhotoCarousel = ({ imgArr }) => {
     return (
         <div style={{marginTop: '50px', marginBottom:'50px'}}>
             <Carousel
@@ -81,22 +81,11 @@ const PhotoCarousel = () => {
                     );
                 }}
             >
-                <div>
-                    <img src='https://i.ytimg.com/vi/pYegv7O21Lo/maxresdefault.jpg'/>
-                    
-                </div>
-                <div>
-                    <img src='https://i.ytimg.com/vi/pYegv7O21Lo/maxresdefault.jpg'/>
-                    
-                </div>
-                <div>
-                    <img src='https://i.ytimg.com/vi/pYegv7O21Lo/maxresdefault.jpg'/>
-                    
-                </div>
-                <div>
-                    <img src='https://i.ytimg.com/vi/pYegv7O21Lo/maxresdefault.jpg'/>
-                    
-                </div>
+                {imgArr.map(elem => 
+                    <div>
+                        <img src={elem} alt='Housing'/>
+                    </div>    
+                )}
             </Carousel>
         </div>
     );
