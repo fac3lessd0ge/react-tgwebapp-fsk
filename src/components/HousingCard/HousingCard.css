@@ -20,6 +20,10 @@
     justify-content: center;
 }
 
+.center-img > img {
+    height: 35vh;
+}
+
 img {
     width: 95%;
 }
