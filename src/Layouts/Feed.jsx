@@ -13,6 +13,8 @@ const Feed = () => {
 
     const [loading, setLoading] = React.useState(true);
 
+    const [resp, setResp] = React.useState('nichego');
+
      const [response, setResponse] = React.useState(null)
 
      const { initData } = React.useContext(InitDataContext);
@@ -25,6 +27,7 @@ const Feed = () => {
             }).then((res) => {
                 console.log(res);
                 // if (res.status === 200) {
+                    setResp(res.data)
                     setResponse(res.data.apartments)
                     setLoading(false);
                 // }
@@ -46,6 +49,7 @@ const Feed = () => {
     return (
         <>
         <div>
+            {JSON.stringify(resp)}
             {!response && loading && <>Загрузка...</>}
             {response?.length && response.map((element, index) =>  
                 <Link to={`/react-tgwebapp-fsk/housing/${element[0]}`}>
