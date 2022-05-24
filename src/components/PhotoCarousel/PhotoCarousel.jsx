@@ -37,12 +37,12 @@ const indicatorStyles = {
     borderRadius: '50%'
 };
 
-const carouselProps = {
-    showArrows: true,
-    infiniteLoop: true,
-    interval: 300,
-    autoPlay: true
-}
+// const carouselProps = {
+//     showArrows: true,
+//     infiniteLoop: true,
+//     interval: 300,
+//     autoPlay: true
+// }
 
 const PhotoCarousel = ({ imgArr }) => {
     return (

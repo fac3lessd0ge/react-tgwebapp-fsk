@@ -2,15 +2,15 @@ import React from 'react';
 import Button from '../components/Button/Button';
 import PhotoCarousel from '../components/PhotoCarousel/PhotoCarousel';
 import { ReactComponent as Location } from '../Assets/Location.svg';
-import { ReactComponent as Chel } from '../Assets/stand4el.svg';
 import { ReactComponent as SrokSdachi } from '../Assets/SrokSda4i.svg';
 import { ReactComponent as Calendar } from '../Assets/Calendar.svg';
 import { ReactComponent as Panelki } from '../Assets/Panelki.svg';
 import { ReactComponent as SmallerPanelki } from '../Assets/SmallerPanelki.svg';
-import { ReactComponent as Otdelka } from '../Assets/Otdelka.svg';
 import { ReactComponent as Kvartirka } from '../Assets/Kvartirka.svg';
 import { ReactComponent as Back } from '../Assets/Arrow_1.svg';
 
+// import { ReactComponent as Chel } from '../Assets/stand4el.svg';
+// import { ReactComponent as Otdelka } from '../Assets/Otdelka.svg';
 
 import './HousingInfo.css';
 import axios from 'axios';
@@ -39,13 +39,13 @@ const HousingInfo = () => {
 				setInfo(res.data.desc);
 				setLoading(false);
 			});
-	}, []);
+	}, [id, initData]);
 
 	return (
 		<>
 			{!loading && (
 				<div>
-					<PhotoCarousel imgArr={info[3]}/>
+					<PhotoCarousel imgArr={info[3].slice(0, 5)}/>
 
 					<div
 						className="main-info"
