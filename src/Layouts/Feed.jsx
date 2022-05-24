@@ -13,7 +13,7 @@ const Feed = () => {
 
     const [loading, setLoading] = React.useState(true);
 
-     const [response, setResponse] = React.useState([])
+     const [response, setResponse] = React.useState(null)
 
      const { initData } = React.useContext(InitDataContext);
 
@@ -32,7 +32,7 @@ const Feed = () => {
                     setLoading(false);
                     setResponse(null);
                 }
-            }) 
+            }).catch(err => {setLoading(false); setResponse(null)})
         } catch (error) {
             console.log('hey!');
             setResponse(null);
@@ -60,7 +60,7 @@ const Feed = () => {
                 />
                 </Link> 
             )}
-
+            {!response && loading && <>Загрузка...</>}
             {!response && !loading && <SearchFail />}
         </div>
         </>
