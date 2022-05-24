@@ -39,6 +39,7 @@ const Feed = () => {
             }).catch(err => {setLoading(false); setResponse(null); setResp('Ошибка!!! 1')})
         } catch (error) {
             console.log('hey!');
+            
             setResp('ошибка!!! 2')
             setResponse(null);
             setLoading(false);
@@ -51,22 +52,19 @@ const Feed = () => {
     return (
         <>
         <div>
-            {JSON.stringify(resp)}
             {!response && loading && <>Загрузка...</>}
-            {/* {response?.length && response.map((element, index) =>  
+            {response && response !== [] && response.map((element, index) =>  
                 <Link to={`/react-tgwebapp-fsk/housing/${element[0]}`}>
                     <HousingCard 
                     key={index}
-                    imgUrl={element[2].split('"').filter((url) => url.length > 2)[0]}
-                    startMark={'не пришло из бд'}
-                    classCategory={'не пришло из бд'}
-                    title={element[0]}
-                    metro={element[3]}
-                    toMetroTime={'не пришло из бд'}
-                    startingPrice={element[5]}
+                    imgUrl={element[4]}
+                    title={element[3]}
+                    metro={element[5]}
+                    toMetroTime={element[8]}
+                    startingPrice={element[1]}
                     />
                 </Link> 
-            )} */}
+            )}
 
             {response && <div style={{color: 'white'}}>{JSON.stringify(response)}</div>}
 

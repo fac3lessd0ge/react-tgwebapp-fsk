@@ -14,14 +14,6 @@ const HousingCard = ({
 }) => {
     return (
         <div className='wrapper-card'>
-            <div className='upper-categories'>
-                <div className='category orange'>
-                    {startMark}
-                </div>
-                <div className='category grey'>
-                    {classCategory}
-                </div>
-            </div>
             <div className='center-img'>
                 <img alt='Дом' src={imgUrl}></img>
             </div>
