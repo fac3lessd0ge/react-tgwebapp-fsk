@@ -14,6 +14,8 @@
 
 .carousel-image {
     height: 40vh;
+    width: 95vw;
+    object-fit: cover;
 }
 
 .carousel.carousel-slider {
