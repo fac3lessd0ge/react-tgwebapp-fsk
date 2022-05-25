@@ -9,6 +9,7 @@ button {
     background-color: #E84E0E;
     color: #fff;
     font-size: 1.1rem;
+    letter-spacing: 0.1rem;
 }
 
 button:hover {

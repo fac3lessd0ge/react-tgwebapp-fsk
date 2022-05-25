@@ -79,7 +79,7 @@ const Feed = () => {
 
             {/* {response && <div style={{color: 'white'}}>{JSON.stringify(response)}</div>} */}
 
-            {response?.length === 0 && !loading && <SearchFail />}
+            {(!response || response?.length === 0) && !loading && <SearchFail />}
         </div>
         </>
     );

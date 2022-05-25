@@ -26,7 +26,8 @@ const labelStyle = {
 }
 
 const labelTextStyle = {
-    content: '"(мил.)"'
+    content: '"(мил.)"',
+	fontSize: '15px'
 }
 
 const inputStyle = {
@@ -41,26 +42,41 @@ const data = [
         value: 'Не имеет значения',
 		date: '3021-01-01'
     },
-    {
-        id: '2',
-        value: '2 квартал 2022',
-		date: '2022-04-01'
-    },
-    {
-        id: '3',
-        value: '3 квартал 2022',
-		date: '2022-07-01'
-    },
-    {
-        id: '4',
-        value: '4 квартал 2022',
+	{
+		id: '2',
+		value: 'Сдан',
+		date: ''
+	},
+	{
+		id: '3',
+		value: '4 квартал 2022',
 		date: '2022-10-01'
+	},
+	{
+		id: '4',
+		value: '2 квартал 2023',
+		date: '2023-04-01'
+	},
+	{
+		id: '5',
+		value: '4 квартал 2023',
+		date: '2023-10-01'
+	},
+    {
+        id: '6',
+        value: '2 квартал 2024',
+		date: '2024-04-01'
     },
     {
-        id: '5',
-        value: '1 квартал 2023',
-		date: '2023-01-01'
-    }
+        id: '7',
+        value: '3 квартал 2024',
+		date: '2024-07-01'
+    },
+	{
+        id: '8',
+        value: '2025 год',
+		date: '2025-01-01'
+    },
 ];
 
 const Quiz = () => {
@@ -82,10 +98,13 @@ const Quiz = () => {
 
 		const targetMap = {
 			'Не имеет значения': 0,
-			'2 квартал 2022': 1,
-			'3 квартал 2022': 2,
-			'4 квартал 2022': 3,
-			'1 квартал 2023': 4
+			'Сдан': 1,
+			'4 квартал 2022': 2,
+			'2 квартал 2023': 3,
+			'4 квартал 2023': 4,
+			'2 квартал 2024': 5,
+			'3 квартал 2024': 6,
+			'2025 год': 7
 		}
 
         setTarget(targetMap[target.value]);
@@ -132,13 +151,14 @@ const Quiz = () => {
 					color: '#fff',
 					fontSize: '30px',
 					margin: '0',
-					paddingTop: '20px'
+					paddingTop: '20px',
+					letterSpacing: '0.1rem'
 				}}
 			>
-				ВАШИ ПРЕДПОЧТЕНИЯ
+				ФИЛЬТРОВАТЬ
 			</TextContainer>
 			<div
-				style={{marginTop: '40px' }}
+				style={{height: '202px', marginTop: '40px', display: 'grid', placeItems: 'center', gridTemplateRows: '70px 100px', gap: '0'}}
 				className="quiz-element quiz-price-wrapper"
 			>
 				<TextContainer
@@ -147,7 +167,7 @@ const Quiz = () => {
 						color: '#727272',
 						fontWeight: '300',
 						letterSpacing: '0',
-						margin: '15px 0% 15px 0%'
+						margin: '40px 0% 15px 0%'
 					}}
 				>
 					Стоимость недвижимости:
@@ -167,9 +187,11 @@ const Quiz = () => {
 					labelStyle={labelStyle}
 					labelTextStyle={labelTextStyle}
 				/>
+				<span className="minmax left">{'5 (мл.)'}</span>
+				<span className="minmax right">{'80 (мл.)'}</span>
 			</div>
 			<div
-				style={{ height: '250px', gap: '40px' }}
+				style={{ height: '279px', gap: '32px' }}
 				className="quiz-element quiz-rooms-wrapper"
 			>
 				<TextContainer
@@ -177,7 +199,7 @@ const Quiz = () => {
 						fontSize: '24px',
 						color: '#727272',
 						fontWeight: '300',
-						marginTop: '10px',
+						marginTop: '30px',
 						letterSpacing: '0'
 					}}
 				>
@@ -204,7 +226,7 @@ const Quiz = () => {
 					fontWeight: '300',
 					marginTop: '5%',
 					letterSpacing: '0'
-				}}>Заселение до: <span className='white'>{data[target].value}</span></TextContainer>
+				}}>Заселение до: <span style={{letterSpacing: '0'}} className='white'>{data[target].value}</span></TextContainer>
 				<div style={{height: '100px', fontSize: '20px', margin: 'auto'}}>
 					<WheelPicker
 						data={data}
@@ -222,7 +244,7 @@ const Quiz = () => {
 					/>
 				</div>
 			</div>
-			<Button clickHandler={buttonClickHandler} innerText={'Подобрать'} linkToPath="/react-tgwebapp-fsk/feed" />
+			<Button style={{fontSize: '18px', width: '240px'}} clickHandler={buttonClickHandler} innerText={'ПОДОБРАТЬ'} linkToPath="/react-tgwebapp-fsk/quiz/" />
 		</div>
 	);
 }

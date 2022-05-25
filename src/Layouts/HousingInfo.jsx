@@ -13,14 +13,18 @@ import { useParams } from 'react-router';
 
 // import { ReactComponent as Chel } from '../Assets/stand4el.svg';
 // import { ReactComponent as Otdelka } from '../Assets/Otdelka.svg';
-
+import url from '../Assets/fakeAPIImage1.png'
 import './HousingInfo.css';
 import axios from 'axios';
 import { BASE_URL_HOUSING } from '../URL';
 import { InitDataContext } from '../InitDataProvider';
 
 
-
+// const defaultInfoForTesting = [
+// 	1, "Москва, ул.Пушкина, д. 1488", 'ЖК Римское', [url,url,url,url,url],
+// 	'asldkjal sd kjalskdj l ask jdla skjd aksdlask djl askdjla ksjdla ksjdla ksjdlak sjd lak sjdlaskdj alsk djlas kjdlask djlaksjd', 1,
+// 	'2023-08-09', '15', '-2', '44', '27.5', '350'
+// ]
 
 const HousingInfo = () => {
 	let { id } = useParams();
@@ -154,7 +158,7 @@ const HousingInfo = () => {
 						<div
 							style={{
 								fontWeight: '300',
-								fontSize: '18px',
+								fontSize: '20px',
 								paddingLeft: '17px',
 								lineHeight: '21.5px',
 								marginBottom: '24px',
@@ -167,7 +171,8 @@ const HousingInfo = () => {
 						<div
 							className="sections-info"
 							style={{
-								paddingBottom: '30px'
+								paddingBottom: '30px',
+								fontSize: '20px'
 							}}
 						>
 							<div className="section-info">
@@ -212,7 +217,7 @@ const HousingInfo = () => {
 										{' '}
 										Этажность{' '}
 									</span>
-									<span className="static"> {info[8]}-{info[9]} </span>
+									<span className="static"> {info[8]} - {info[9]} </span>
 								</div>
 							</div>
 							<div className="section-info">
@@ -227,7 +232,7 @@ const HousingInfo = () => {
 										{' '}
 										Метраж:{' '}
 									</span>
-									<span className="static"> {info[10]}-{info[11]} </span>
+									<span className="static"> {info[10]} - {info[11]} </span>
 								</div>
 							</div>
 							{/* <div className="section-info">
@@ -251,8 +256,8 @@ const HousingInfo = () => {
 						</div>
 					</div>
 
-					<div className="search-results-counter">
-						<div>
+					<div style={{height: '220px'}} className="search-results-counter">
+						<div style={{marginBottom: '15px'}}>
 							<div
 								style={{
 									fontWeight: '400',
@@ -282,10 +287,11 @@ const HousingInfo = () => {
 
 						<Button
 							style={{
+								minHeight: '70px',
 								minWidth: '80vw',
 								margin: '20px auto'
 							}}
-							innerText={'ПОЛУЧИТЬ СПИСОК КВАРТИР'}
+							innerText={`ПОЛУЧИТЬ СПИСОК КВАРТИР`}
 							linkToPath={'/react-tgwebapp-fsk/recallgethousing'}
 						/>
 					</div>

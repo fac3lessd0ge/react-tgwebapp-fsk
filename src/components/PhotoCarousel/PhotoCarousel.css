@@ -2,14 +2,18 @@
     display: flex;
     justify-content: center;
     background-color: #000;
-    height: 25%;
+    height: 10%;
     align-items: center;
-    bottom: -60px !important; 
+    bottom: -70px !important; 
     position: absolute;
 }
 
+.carousel-status {
+    visibility: hidden;
+}
+
 .carousel-image {
-    height: 35vh;
+    height: 50vh;
 }
 
 .carousel.carousel-slider {

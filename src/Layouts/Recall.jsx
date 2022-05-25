@@ -72,8 +72,9 @@ const Reacll = ({ phrase }) => {
 					}}
 				>
 					<div style={{textAlign: 'center', maxWidth: '90%'}}>
-						<span>Оставьте ваш номер телефона </span>
+						<span style={{fontSize: '30px'}}>Оставьте ваш номер телефона </span>
 						<span style={{
+							fontSize:'30px',
 							fontWeight: '300',
 
 						}}> и { phrase }</span>

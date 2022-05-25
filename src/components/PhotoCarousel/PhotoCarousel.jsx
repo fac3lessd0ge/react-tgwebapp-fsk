@@ -33,7 +33,7 @@ const indicatorStyles = {
     width: 8,
     height: 8,
     display: 'inline-block',
-    margin: '0 26px',
+    margin: '0 13px',
     borderRadius: '50%'
 };
 
@@ -46,7 +46,7 @@ const indicatorStyles = {
 
 const PhotoCarousel = ({ imgArr }) => {
     return (
-        <div style={{marginTop: '50px', marginBottom:'50px'}}>
+        <div style={{marginTop: '50px', marginBottom:'80px'}}>
             <Carousel
                 width={'100%'}
                 showThumbs={false}
@@ -81,8 +81,8 @@ const PhotoCarousel = ({ imgArr }) => {
                     );
                 }}
             >
-                {imgArr.map(elem => 
-                    <div>
+                {imgArr.map((elem, index) => 
+                    <div key={index}>
                         <img className='carousel-image' src={elem} alt='Housing'/>
                     </div>    
                 )}
