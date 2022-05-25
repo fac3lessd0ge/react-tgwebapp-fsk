@@ -80,7 +80,9 @@ const HousingInfo = () => {
 						>
 							<div
 								className="housing-adress-info"
-								style={{ marginBottom: '20px' }}
+								style={{ marginBottom: '20px' ,
+									maxWidth: '90vw'
+								}}
 							>
 								<Location /> Адрес: {info[1]}{' '}
 							</div>
