@@ -28,10 +28,17 @@ span.white {
     font-size: 16px;
     color: #3F3F40;
     position: absolute;
-    padding-top: 120px;
+    padding-top: 145px;
     letter-spacing: 0;
     z-index: 0;
     pointer-events: none;
+}
+
+@media screen and (max-width: 365px) {
+    .minmax {
+        padding-top: 120px;
+    }
+
 }
 
 .left {
