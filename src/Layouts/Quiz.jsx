@@ -150,8 +150,8 @@ const Quiz = () => {
 				style={{
 					color: '#fff',
 					fontSize: '30px',
-					margin: '0',
-					paddingTop: '20px',
+					margin: '56px auto 0 auto',
+					paddingTop: '0',
 					letterSpacing: '0.1rem'
 				}}
 			>
