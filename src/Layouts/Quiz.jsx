@@ -40,12 +40,12 @@ const data = [
     {
         id: '1',
         value: 'Не имеет значения',
-		date: '3021-01-01'
+		date: 'not_mean'
     },
 	{
 		id: '2',
 		value: 'Сдан',
-		date: ''
+		date: 'already'
 	},
 	{
 		id: '3',

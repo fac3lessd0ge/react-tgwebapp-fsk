@@ -21,12 +21,8 @@
 }
 
 .center-img > img {
-    height: 35vh;
-}
-
-img {
-    width: 316px;
     height: 562px;
+    width: 316px;
 }
 
 .lower-info {
