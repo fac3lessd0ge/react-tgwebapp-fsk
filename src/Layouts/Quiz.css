@@ -28,7 +28,7 @@ span.white {
     font-size: 16px;
     color: #3F3F40;
     position: absolute;
-    transform: translateY(60px);
+    padding-top: 120px;
     letter-spacing: 0;
 }
 
