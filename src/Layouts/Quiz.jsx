@@ -18,7 +18,8 @@ const thumbStyle = {
     borderRadius: '50%',
     backgroundImage: `url(${thumbs})`,
     backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
+	zIndex: '1'
 }
 
 const labelStyle = {

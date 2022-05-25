@@ -28,8 +28,10 @@ span.white {
     font-size: 16px;
     color: #3F3F40;
     position: absolute;
-    padding-top: 140px;
+    padding-top: 120px;
     letter-spacing: 0;
+    z-index: 0;
+    pointer-events: none;
 }
 
 .left {
